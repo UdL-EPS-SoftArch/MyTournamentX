@@ -1,0 +1,28 @@
+<mat-card>
+  <mat-card-header>
+    <div mat-card-avatar><mat-icon class="icon-big" aria-hidden="true">account_circle</mat-icon></div>
+    <mat-card-title>{{player.id}}</mat-card-title>
+    <mat-card-subtitle>MyTournamentX Player</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="col-md-4 p-3">
+      <h6 class="card-subtitle text-muted">Username</h6>
+      <p class="card-text">{{player.id}}</p>
+    </div>
+    <div class="col-md-4 p-3">
+      <h6 class="card-subtitle text-muted">E-Mail</h6>
+      <p class="card-text">{{player.email}}</p>
+    </div>
+    <div class="col-md-4 p-3">
+      <h6 class="card-subtitle text-muted">Role</h6>
+      <p class="card-text">{{player.authorities[0]?.authority.split('_')[1]}}</p>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button id="listBtn" mat-raised-button color="primary" [routerLink]="['/players']">Players List</button>
+    <button id="editBtn" *ngIf="this.authenticationService.getCurrentUser().uri == player.uri"
+            mat-raised-button color="accent" [routerLink]="['edit']">Edit</button>
+    <button id="delBtn" *ngIf="this.authenticationService.getCurrentUser().uri == player.uri"
+            mat-raised-button color="warn" [routerLink]="['delete']">Delete</button>
+  </mat-card-actions>
+</mat-card>

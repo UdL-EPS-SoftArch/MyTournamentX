@@ -1,0 +1,11 @@
+  <a mat-button *ngIf="isLoggedIn() && isUserInRole('player')"
+     [routerLink]="['/players/'+getCurrentUserId()]">
+    <span class="fa fa-user-circle-o"></span> {{getCurrentUserName()}}</a>
+
+  <a mat-button *ngIf="isLoggedIn()" (click)="logout(); $event.preventDefault()">
+    <span class="fa fa-unlock"></span> Logout</a>
+
+  <a mat-button *ngIf="!isLoggedIn()" [routerLink]="['/login']">Login</a>
+
+  <a mat-button *ngIf="!isLoggedIn()" [routerLink]="['/players/register']">
+    <span class="fa fa-key"></span> Register</a>

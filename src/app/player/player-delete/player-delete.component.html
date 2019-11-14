@@ -1,0 +1,21 @@
+<mat-card>
+  <mat-card-header>
+    <div mat-card-avatar><mat-icon class="icon-big" aria-hidden="true">warning</mat-icon></div>
+    <mat-card-title>Please, confirm deletion</mat-card-title>
+    <mat-card-subtitle>Delete player {{player.id}}?</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="col-md-4 p-3">
+      <h6 class="card-subtitle text-muted">Username</h6>
+      <p class="card-text">{{player.id}}</p>
+    </div>
+    <div class="col-md-4 p-3">
+      <h6 class="card-subtitle text-muted">E-Mail</h6>
+      <p class="card-text">{{player.email}}</p>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="accent" [routerLink]="[player.uri]">Cancel</button>
+    <button mat-raised-button color="warn" (click)="delete()">Delete</button>
+  </mat-card-actions>
+</mat-card>
