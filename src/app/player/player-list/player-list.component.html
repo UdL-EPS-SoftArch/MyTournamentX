@@ -1,14 +1,19 @@
-<mat-list>
-  <h3 mat-subheader>MyTournamentX Players</h3>
-  <mat-list-item *ngFor="let player of players">
-    <mat-icon mat-list-icon>account_circle</mat-icon>
-    <a mat-line [routerLink]="['/players', player.id]">{{player.id}}</a>
-    <p mat-line> {{player.email}} </p>
-  </mat-list-item>
-</mat-list>
-
-<mat-paginator [length]="totalPlayers"
-               [pageSize]="pageSize"
-               (page)="changePage($event)">
-</mat-paginator>
-
+<mat-card>
+  <mat-card-header>
+    <div mat-card-avatar><mat-icon class="icon-big" aria-hidden="true">list</mat-icon></div>
+    <mat-card-title>MyTournamentX Players</mat-card-title>
+    <mat-card-subtitle>List of players</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let player of players">
+        <mat-icon mat-list-icon>account_circle</mat-icon>
+        <a mat-line [routerLink]="['/players', player.id]">{{player.id}}</a>
+        <p mat-line> {{player.email}} </p>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+  <mat-card-actions fxLayoutAlign="center">
+    <mat-paginator [length]="totalPlayers" [pageSize]="pageSize" (page)="changePage($event)"></mat-paginator>
+  </mat-card-actions>
+</mat-card>
