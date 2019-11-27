@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Team } from '../team';
 
 @Component({
   selector: 'app-team-list',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./team-list.component.css']
 })
 export class TeamListComponent implements OnInit {
-
+  public teams: Team [];
   constructor() { }
 
   ngOnInit() {
