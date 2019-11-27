@@ -22,9 +22,9 @@
   </mat-card-content>
   <mat-card-actions>
     <button id="listBtn" mat-raised-button color="primary" [routerLink]="['/players']">Players List</button>
-    <button id="editBtn" *ngIf="this.authenticationService.getCurrentUser().uri == player.uri"
+    <button id="editBtn" *ngIf="getCurrentUser().uri == player.uri"
             mat-raised-button color="accent" [routerLink]="['edit']">Edit</button>
-    <button id="delBtn" *ngIf="this.authenticationService.getCurrentUser().uri == player.uri"
+    <button id="delBtn" *ngIf="getCurrentUser().uri == player.uri"
             mat-raised-button color="warn" [routerLink]="['delete']">Delete</button>
   </mat-card-actions>
 </mat-card>

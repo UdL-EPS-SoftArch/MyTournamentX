@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {Router} from '@angular/router';
 import {PlayerService} from '../player.service';
-import {User} from '../../login-basic/user';
 import {Player} from '../player';
 import {AuthenticationBasicService} from '../../login-basic/authentication-basic.service';
 
@@ -13,6 +12,7 @@ import {AuthenticationBasicService} from '../../login-basic/authentication-basic
 export class PlayerEditComponent implements OnInit {
   public player: Player = new Player();
   public editing = true;
+  public registering = false;
 
   constructor(private route: ActivatedRoute,
               private router: Router,

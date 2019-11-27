@@ -10,6 +10,7 @@ import { Player } from '../player';
 export class PlayerRegisterComponent implements OnInit {
   public player: Player;
   public registering = true;
+  public editing = false;
 
   constructor(private router: Router,
               private playerService: PlayerService) {
