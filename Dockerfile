@@ -8,4 +8,7 @@ RUN echo "for f in \$(find /usr/share/nginx/html -name 'main*.js'); do \
           mv main.tmp \$f ; done && \
           nginx -g 'daemon off;'" > run.sh
 
-ENTRYPOINT ["sh", "run.sh"]
+COPY entrypoint.sh /usr/share/nginx/
+RUN chmod +x /usr/share/nginx/entrypoint.sh
+ENTRYPOINT ["/bin/sh", "/usr/share/nginx/entrypoint.sh"]
+
