@@ -25,6 +25,7 @@
           <button style="margin-left: 15px;"mat-icon-button [matMenuTriggerFor]="teamsMenu">Teams</button>
           <mat-menu #teamsMenu="matMenu">
             <button mat-menu-item [routerLink]="'/teams'">List Teams</button>
+            <button mat-menu-item [routerLink]="'/teams/:id'">My Teams</button>
           </mat-menu>
 
         </div>

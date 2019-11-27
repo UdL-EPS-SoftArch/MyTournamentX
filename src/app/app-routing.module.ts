@@ -11,6 +11,7 @@ import { PlayerRegisterComponent } from './player/player-register/player-registe
 
 //Teams
 import { TeamListComponent} from './team/team-list/team-list.component';
+import { TeamDetailComponent } from './team/team-detail/team-detail.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,7 @@ const routes: Routes = [
   
   //Teams
   {path: 'teams',component: TeamListComponent},
+  {path: 'teams/:id',component: TeamDetailComponent},
 ];
 
 @NgModule({
