@@ -35,6 +35,7 @@ import { PlayerRegisterComponent } from './player/player-register/player-registe
 import { PlayerEditComponent } from './player/player-edit/player-edit.component';
 import { PlayerSearchComponent } from './player/player-search/player-search.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { TeamListComponent } from './team/team-list/team-list.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     PlayerRegisterComponent,
     PlayerEditComponent,
     PlayerSearchComponent,
+    TeamListComponent,
   ],
   imports: [
     BrowserModule,

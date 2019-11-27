@@ -9,6 +9,10 @@ import { PlayerDeleteComponent } from './player/player-delete/player-delete.comp
 import { PlayerEditComponent } from './player/player-edit/player-edit.component';
 import { PlayerRegisterComponent } from './player/player-register/player-register.component';
 
+//Teams
+import { TeamListComponent} from './team/team-list/team-list.component';
+
+
 const routes: Routes = [
   {path: 'players/register', component: PlayerRegisterComponent},
   {path: 'players/:id/edit', component: PlayerEditComponent, canActivate: [PlayerGuard]},
@@ -17,6 +21,9 @@ const routes: Routes = [
   {path: 'players', component: PlayerListComponent, canActivate: [LoggedInGuard]},
   {path: 'about', component: AboutComponent},
   {path: '', redirectTo: 'about', pathMatch: 'full'},
+  
+  //Teams
+  {path: 'teams',component: TeamListComponent},
 ];
 
 @NgModule({

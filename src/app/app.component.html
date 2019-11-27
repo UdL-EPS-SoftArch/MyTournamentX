@@ -20,6 +20,13 @@
           <mat-menu #playersMenu="matMenu">
             <button mat-menu-item [routerLink]="'/players'">List Players</button>
           </mat-menu>
+
+          <!-- Team -->
+          <button style="margin-left: 15px;"mat-icon-button [matMenuTriggerFor]="teamsMenu">Teams</button>
+          <mat-menu #teamsMenu="matMenu">
+            <button mat-menu-item [routerLink]="'/teams'">List Teams</button>
+          </mat-menu>
+
         </div>
         <span class="menu-spacer"></span>
         <div app-login-navbar></div>
