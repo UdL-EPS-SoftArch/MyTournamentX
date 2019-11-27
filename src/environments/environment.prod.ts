@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  API: 'https://mytournamentx-api.herokuapp.com'
+  API: '${API_URL}'
 };
