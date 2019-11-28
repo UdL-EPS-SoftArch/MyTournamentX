@@ -1,7 +1,7 @@
 export class Authority {
   authority = '';
 
-  constructor(values: Object = {}) {
+  constructor(values: object = {}) {
     Object.assign(this, values);
   }
 }

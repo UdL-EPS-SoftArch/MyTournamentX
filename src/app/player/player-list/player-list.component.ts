@@ -16,7 +16,7 @@ export class PlayerListComponent implements OnInit {
   private sorting: Sort[] = [{ path: 'username', order: 'ASC' }];
 
   constructor(private router: Router,
-    private playerService: PlayerService) {
+              private playerService: PlayerService) {
   }
 
   ngOnInit() {
