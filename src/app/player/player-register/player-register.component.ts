@@ -24,4 +24,7 @@ export class PlayerRegisterComponent implements OnInit {
     this.playerService.create(this.player).subscribe(
       (player: Player) => this.router.navigate(['/login']));
   }
+
+  onChange() {
+  }
 }

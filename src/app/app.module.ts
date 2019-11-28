@@ -6,7 +6,7 @@ import { NgxHalClientModule } from '@lagoshny/ngx-hal-client';
 import { ExternalConfigurationService } from './external-configuration-service';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule, MatIconModule, MatListModule, MatButtonModule } from '@angular/material';
+import { MatToolbarModule, MatIconModule, MatListModule, MatButtonModule, MatCheckboxModule } from '@angular/material';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -63,6 +63,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatButtonModule,
     MatIconModule,
     MatFormFieldModule,
+    MatCheckboxModule,
     MatInputModule,
     FlexLayoutModule,
     MatSidenavModule,
