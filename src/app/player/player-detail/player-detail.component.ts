@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PlayerService } from '../player.service';
-import { Player } from '../player';
 import { AuthenticationBasicService } from '../../login-basic/authentication-basic.service';
+import { Player } from '../player';
+import { User } from '../../login-basic/user';
 
 @Component({
   selector: 'app-player-detail',
@@ -24,5 +25,9 @@ export class PlayerDetailComponent implements OnInit {
 
   public delete() {
     this.playerService.delete(this.player).subscribe(() => this.router.navigateByUrl('/'));
+  }
+
+  public getCurrentUser(): User {
+    return this.authenticationService.getCurrentUser();
   }
 }
