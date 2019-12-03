@@ -9,4 +9,8 @@ export class TournamentInvitation extends Resource {
   createdBy: Player;
   invitesTo: Tournament;
   message: string;
+
+  constructor() {
+    super();
+  }
 }

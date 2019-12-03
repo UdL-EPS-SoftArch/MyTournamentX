@@ -8,4 +8,8 @@ export class Team extends Resource {
   maxPlayers: number;
   leader: Player;
   players: Player[];
+
+  constructor() {
+    super();
+  }
 }

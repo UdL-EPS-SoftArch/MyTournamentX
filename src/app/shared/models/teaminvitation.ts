@@ -5,4 +5,8 @@ export class TeamInvitation extends Resource {
   message: string;
   accepted: boolean;
   creationDate: Date;
+
+  constructor() {
+    super();
+  }
 }

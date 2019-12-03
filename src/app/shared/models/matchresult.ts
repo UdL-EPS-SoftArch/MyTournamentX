@@ -8,4 +8,8 @@ export class MatchResult extends Resource {
   winner: Team;
   match: Match;
   sender: Team;
+
+  constructor() {
+    super();
+  }
 }
