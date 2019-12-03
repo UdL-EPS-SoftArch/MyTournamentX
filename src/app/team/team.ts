@@ -4,7 +4,7 @@ import { Resource } from '@lagoshny/ngx-hal-client';
 
 export class Team extends Resource{
     
-     id: string; //name of the team
+    id: string; //name of the team
     
     //ATRIBUTES
     level: string;

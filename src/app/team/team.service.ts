@@ -1,16 +1,16 @@
 import { Injectable,Injector } from '@angular/core';
 import{Team} from './team'
 import { RestService } from '@lagoshny/ngx-hal-client';
-import {Observable} from  'rxjs';
+import {Observable} from  'rxjs/internal/Observable';
 
 
 
 
-/*@Injectable({
+@Injectable({
   providedIn: 'root'
-})*/
+})
 
-@Injectable()
+
 export class TeamService extends RestService<Team>{
   
   
@@ -19,6 +19,11 @@ export class TeamService extends RestService<Team>{
 
   constructor(injector: Injector ) {
     super(Team,'teams',injector); 
+  }
+
+  public findTeamByName(name:string): Observable <Team[]> {
+    const options: any = {params: [{key: 'id',value:name}]};
+    return this.search('findTeamByName',options);
   }
 
 }

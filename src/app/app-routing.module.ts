@@ -12,6 +12,7 @@ import { PlayerRegisterComponent } from './player/player-register/player-registe
 //Teams
 import { TeamListComponent} from './team/team-list/team-list.component';
 import { TeamDetailComponent } from './team/team-detail/team-detail.component';
+import { TeamCreateComponent } from './team/team-create/team-create.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,7 @@ const routes: Routes = [
   
   //Teams
   {path: 'teams',component: TeamListComponent},
+  {path: 'teams/new',component: TeamCreateComponent},
   {path: 'teams/:id',component: TeamDetailComponent},
 ];
 
