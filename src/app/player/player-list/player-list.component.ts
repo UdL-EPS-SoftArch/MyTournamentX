@@ -1,7 +1,7 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { PlayerService } from '../player.service';
-import { Player } from '../player';
+import { Player } from '../../shared/models/player';
 import { Sort } from '@lagoshny/ngx-hal-client';
 import { PageEvent } from '@angular/material/paginator';
 

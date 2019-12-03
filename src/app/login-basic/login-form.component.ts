@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthenticationBasicService } from './authentication-basic.service';
 import { Location } from '@angular/common';
 import { NgForm } from '@angular/forms';
-import { User } from './user';
+import { User } from '../shared/models/user';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
