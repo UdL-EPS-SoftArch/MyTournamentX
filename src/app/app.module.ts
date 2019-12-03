@@ -38,6 +38,12 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { TeamListComponent } from './team/team-list/team-list.component';
 import { TeamDetailComponent } from './team/team-detail/team-detail.component';
 
+//Angular Material imports to team
+import {MatTableModule} from '@angular/material/table';
+import { TeamEditComponent } from './team/team-edit/team-edit.component';
+import { TeamCreateComponent } from './team/team-create/team-create.component';
+import { TeamDeleteComponent } from './team/team-delete/team-delete.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,6 +57,9 @@ import { TeamDetailComponent } from './team/team-detail/team-detail.component';
     PlayerSearchComponent,
     TeamListComponent,
     TeamDetailComponent,
+    TeamEditComponent,
+    TeamCreateComponent,
+    TeamDeleteComponent,
   ],
   imports: [
     BrowserModule,
@@ -72,7 +81,11 @@ import { TeamDetailComponent } from './team/team-detail/team-detail.component';
     MatSidenavModule,
     MatCardModule,
     MatPaginatorModule,
-    MatDialogModule
+    MatDialogModule,
+
+    //Angular Table Module
+    MatTableModule,
+
   ],
   providers: [
     { provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: { duration: 5000 } },
