@@ -1,6 +1,6 @@
 import {Injectable, Injector} from '@angular/core';
-import {RestService} from "@lagoshny/ngx-hal-client";
-import {Round} from "../models/round";
+import {RestService} from '@lagoshny/ngx-hal-client';
+import {Round} from '../models/round';
 
 @Injectable({
   providedIn: 'root'

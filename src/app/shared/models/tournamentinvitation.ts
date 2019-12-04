@@ -1,6 +1,6 @@
-import {Resource} from "@lagoshny/ngx-hal-client";
-import {Player} from "./player";
-import {Tournament} from "./tournament";
+import {Resource} from '@lagoshny/ngx-hal-client';
+import {Player} from './player';
+import {Tournament} from './tournament';
 
 export class TournamentInvitation extends Resource {
   id: number;

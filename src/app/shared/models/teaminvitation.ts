@@ -1,4 +1,4 @@
-import {Resource} from "@lagoshny/ngx-hal-client";
+import {Resource} from '@lagoshny/ngx-hal-client';
 
 export class TeamInvitation extends Resource {
   id: string;

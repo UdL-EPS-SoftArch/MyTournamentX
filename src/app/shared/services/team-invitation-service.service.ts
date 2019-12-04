@@ -1,6 +1,6 @@
 import {Injectable, Injector} from '@angular/core';
-import {RestService} from "@lagoshny/ngx-hal-client";
-import {TeamInvitation} from "../models/teaminvitation";
+import {RestService} from '@lagoshny/ngx-hal-client';
+import {TeamInvitation} from '../models/teaminvitation';
 
 @Injectable({
   providedIn: 'root'

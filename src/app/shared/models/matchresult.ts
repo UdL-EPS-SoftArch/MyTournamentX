@@ -1,6 +1,6 @@
-import {Resource} from "@lagoshny/ngx-hal-client";
-import {Team} from "./team";
-import {Match} from "./match";
+import {Resource} from '@lagoshny/ngx-hal-client';
+import {Team} from './team';
+import {Match} from './match';
 
 export class MatchResult extends Resource {
   id: number;

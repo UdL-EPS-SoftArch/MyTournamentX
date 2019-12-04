@@ -1,6 +1,6 @@
 import {Injectable, Injector} from '@angular/core';
-import {RestService} from "@lagoshny/ngx-hal-client";
-import {Match} from "../models/match";
+import {RestService} from '@lagoshny/ngx-hal-client';
+import {Match} from '../models/match';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +8,6 @@ import {Match} from "../models/match";
 export class MatchServiceService extends RestService<Match> {
 
   constructor(injector: Injector) {
-    super(Match, 'matches', injector)
+    super(Match, 'matches', injector);
   }
 }

@@ -1,5 +1,5 @@
-import {Resource} from "@lagoshny/ngx-hal-client";
-import {Team} from "./team";
+import {Resource} from '@lagoshny/ngx-hal-client';
+import {Team} from './team';
 
 export class Tournament extends Resource {
   id: string;
