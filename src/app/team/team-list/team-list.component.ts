@@ -17,7 +17,12 @@ export class TeamListComponent implements OnInit {
   constructor(private teamService: TeamService) { }
 
   ngOnInit() {
-    
+    this.teamService.getAll()
+    .subscribe(
+      (teamsList: Team[]) => {
+        this.teamList = teamsList; 
+        this.totalTeams = teamsList.length;
+       })
   }
 
 }
