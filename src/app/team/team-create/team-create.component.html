@@ -1,6 +1,6 @@
 
 <h2>Create a new Team</h2>
-<form id="game-create" (ngSubmit)="onSubmit()" #form="ngForm">
+<form id="team-create" (ngSubmit)="onSubmit()" #form="ngForm">
   <fieldset>
 
     <!-- TeamName input -->
@@ -37,7 +37,7 @@
 
     <!-- Button -->
     <div class="form-group">
-      <button id="submit" type="submit" class="btn m-1 btn-success pull-right" [routerLink]="['']" [disabled]="!form.form.valid">Create</button>
+      <button id="submit" type="submit" class="btn m-1 btn-success pull-right" [routerLink]="['/teams/new']" [disabled]="!form.form.valid">Create</button> <!--routa de creació-->
       <button id="listBtn" type="button" [routerLink]="['']" class="btn m-1 btn-outline-primary pull-right">Back</button>
     </div>
 
