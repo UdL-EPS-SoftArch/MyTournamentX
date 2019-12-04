@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PlayerService } from '../player.service';
+import { Player } from '../../shared/models/player';
+import { User } from '../../shared/models/user';
 import { AuthenticationBasicService } from '../../login-basic/authentication-basic.service';
-import { Player } from '../player';
-import { User } from '../../login-basic/user';
 
 @Component({
   selector: 'app-player-detail',

@@ -1,4 +1,4 @@
-import {Authority} from './authority';
+import {Authority} from '../../login-basic/authority';
 import {Resource} from '@lagoshny/ngx-hal-client';
 
 export class User extends Resource {
