@@ -1,28 +1,27 @@
-import { Resource } from '@lagoshny/ngx-hal-client'
+import { Component, OnInit, Injectable } from '@angular/core';
+import { Tournament } from '../tournament';
+import { Router } from '@angular/router';
+import { TournamentServiceService } from '../tournament.service';
 
-export class Tournament extends Resource{
-    
-    id: string; //name of the tournament
+@Component({
+  selector: 'app-tournament-create',
+  templateUrl: './tournament-create.component.html',
+  styleUrls: ['./tournament-create.component.css']
+})
 
-    //Atributes
-    game: string;
-    type: string;
-    description:string;
-    minParticipants: number;
-    maxParticipants: number;
-    minTeamsPlayers: number;
-    maxTeamsPlayers: number;
-    limitDate: Date;
+export class TournamentCreateComponent implements OnInit {
+
+  public tournament: Tournament;
+
+  constructor( private router: Router,private teamService:TournamentServiceService) { }
+
+  ngOnInit() {
+    this.tournament = new Tournament();
+  }
 
 
-    constructor(){
-        super();
-        enum level{
-            Begginner = "BEGGINNER",
-            Amateur = "AMATEUR",
-            Professional = "PROFESSIONAL",
-        }
-    }
+  onSubmit():void{
+    this.teamService.create(this.tournament).subscribe((team: Tournament) => this.router.navigate(['/tournaments'])); // ruta API-post
+  }
+  
 }
-
-
