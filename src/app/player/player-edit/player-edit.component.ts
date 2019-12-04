@@ -2,7 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {Router} from '@angular/router';
 import {PlayerService} from '../player.service';
-import {Player} from '../player';
+import {User} from '../../shared/models/user';
+import {Player} from '../../shared/models/player';
 import {AuthenticationBasicService} from '../../login-basic/authentication-basic.service';
 import { routes } from 'src/app/login-basic/login-basic.routing';
 

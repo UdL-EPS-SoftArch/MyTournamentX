@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PlayerService } from '../player.service';
-import { Player } from '../player';
+import { Player } from '../../shared/models/player';
 
 @Component({
   selector: 'app-player-register',
