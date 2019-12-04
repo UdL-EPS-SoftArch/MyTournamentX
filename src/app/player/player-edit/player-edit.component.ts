@@ -5,6 +5,7 @@ import {PlayerService} from '../player.service';
 import {User} from '../../shared/models/user';
 import {Player} from '../../shared/models/player';
 import {AuthenticationBasicService} from '../../login-basic/authentication-basic.service';
+import { routes } from 'src/app/login-basic/login-basic.routing';
 
 @Component({
   selector: 'app-player-edit',
@@ -13,6 +14,7 @@ import {AuthenticationBasicService} from '../../login-basic/authentication-basic
 export class PlayerEditComponent implements OnInit {
   public player: Player = new Player();
   public editing = true;
+  public registering = false;
 
   constructor(private route: ActivatedRoute,
               private router: Router,
@@ -26,11 +28,18 @@ export class PlayerEditComponent implements OnInit {
       player => this.player = player);
   }
 
+  onChange() {
+    this.player.passwordReset = !this.player.passwordReset;
+  }
+
   onSubmit(): void {
     this.player.authorities = []; // This field is not editable
     this.playerService.update(this.player)
       .subscribe(
-        (player: Player) => this.router.navigate([player.uri]));
+        (player: Player) => {
+          this.authenticationService.logout();
+          this.router.navigate(['/login']);
+        });
   }
 
   getCurrentUserId(): string {

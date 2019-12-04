@@ -7,7 +7,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class LoggedInGuard implements CanActivate {
 
   constructor(private authentication: AuthenticationBasicService,
-              private snackBar: MatSnackBar,) {
+              private snackBar: MatSnackBar) {
   }
 
   canActivate(): boolean {

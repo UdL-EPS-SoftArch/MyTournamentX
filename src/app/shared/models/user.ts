@@ -9,6 +9,7 @@ export class User extends Resource {
   authorities: Authority[] = [];
   authorization = '';
   password = '';
+  passwordReset = false;
   enabled: boolean;
 
   constructor(values: object = {}) {

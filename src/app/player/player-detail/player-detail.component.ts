@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PlayerService } from '../player.service';
 import { Player } from '../../shared/models/player';
+import { User } from '../../shared/models/user';
 import { AuthenticationBasicService } from '../../login-basic/authentication-basic.service';
 
 @Component({
@@ -24,5 +25,9 @@ export class PlayerDetailComponent implements OnInit {
 
   public delete() {
     this.playerService.delete(this.player).subscribe(() => this.router.navigateByUrl('/'));
+  }
+
+  public getCurrentUser(): User {
+    return this.authenticationService.getCurrentUser();
   }
 }

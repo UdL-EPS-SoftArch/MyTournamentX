@@ -10,6 +10,7 @@ import { Player } from '../../shared/models/player';
 export class PlayerRegisterComponent implements OnInit {
   public player: Player;
   public registering = true;
+  public editing = false;
 
   constructor(private router: Router,
               private playerService: PlayerService) {
@@ -22,5 +23,8 @@ export class PlayerRegisterComponent implements OnInit {
   onSubmit(): void {
     this.playerService.create(this.player).subscribe(
       (player: Player) => this.router.navigate(['/login']));
+  }
+
+  onChange() {
   }
 }
