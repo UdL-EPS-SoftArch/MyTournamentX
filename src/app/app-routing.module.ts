@@ -13,6 +13,7 @@ import { PlayerRegisterComponent } from './player/player-register/player-registe
 import { TeamListComponent} from './team/team-list/team-list.component';
 import { TeamDetailComponent } from './team/team-detail/team-detail.component';
 import { TeamCreateComponent } from './team/team-create/team-create.component';
+import { TeamEditComponent } from './team/team-edit/team-edit.component';
 
 
 const routes: Routes = [
@@ -27,6 +28,7 @@ const routes: Routes = [
   //Teams
   {path: 'teams',component: TeamListComponent},
   {path: 'teams/new',component: TeamCreateComponent},
+  {path: 'teams/:id/edit', component: TeamEditComponent},
   {path: 'teams/:id',component: TeamDetailComponent},
 ];
 

@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Team } from '../team';
+import { ActivatedRoute, Router } from '@angular/router';
+import { TeamService } from '../team.service';
+
+
 
 @Component({
   selector: 'app-team-edit',
@@ -7,9 +12,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeamEditComponent implements OnInit {
 
-  constructor() { }
+  public team: Team = new Team();
+
+  constructor(private route: ActivatedRoute, private teamService: TeamService,private router: Router) { }
 
   ngOnInit() {
+    const id = this.route.snapshot.paramMap.get('id');
+    this.teamService.get(id).subscribe(team =>{this.team=team});
   }
 
+  public edit():void{
+    this.teamService.update(this.team).subscribe((team: Team)=> this.router.navigate[team.uri]);
+  }
 }

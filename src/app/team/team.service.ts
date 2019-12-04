@@ -18,7 +18,7 @@ export class TeamService extends RestService<Team>{
   private teamsUrl = 'http://localhost:8080/teams'; //URL to web api
 
   constructor(injector: Injector ) {
-    super(Team,'teams',injector); // teams es el URI de la api 
+    super(Team,'teams',injector); // 'teams' es el URI de la api 
   }
 
   public findTeamByName(name:string): Observable <Team[]> {

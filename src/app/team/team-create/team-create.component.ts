@@ -21,7 +21,7 @@ export class TeamCreateComponent implements OnInit {
 
 
   onSubmit():void{
-    this.teamService.create(this.team).subscribe((team: Team) => this.router.navigate(['/teams'])); // ruta API-post
+    this.teamService.create(this.team).subscribe((team: Team) => this.router.navigate(['/teams'])); // apartir de => ruta del client-site
   }
   
 }
