@@ -1,3 +1,11 @@
 <p>team-list works!</p>
 {{totalTeams}}
 
+<table>
+        <ng-container *ngFor="let team of teamList">
+            <tr><td>{{team.id}}</td></tr>
+            <tr><td>{{team.game}}</td></tr>
+            <tr><td>{{team.level}}</td></tr>
+            <tr><td>{{team.maxPlayers}}</td></tr>
+        </ng-container>
+   </table>
