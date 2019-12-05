@@ -1,4 +1,5 @@
 import { Resource } from '@lagoshny/ngx-hal-client';
+import { Player } from '../player/player';
 
 
 
@@ -10,6 +11,8 @@ export class Team extends Resource{
     level: string;
     game: string;
     maxPlayers: number;
+    teamLeader: Player;
+    playersList: Player[];
     
     //URI
     uri: string;

@@ -14,7 +14,7 @@ export class TeamListComponent implements OnInit {
   
   public teamList: Team [] = [];
   public totalTeams = 0;
-  displayedColumns: string [] = ['id', 'game', 'level', 'maxPlayers']; // matColumnDef values
+  displayedColumns: string [] = ['id',]; // matColumnDef values
 
   constructor(private teamService: TeamService) { 
     
