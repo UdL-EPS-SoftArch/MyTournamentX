@@ -9,6 +9,10 @@ import { PlayerDeleteComponent } from './player/player-delete/player-delete.comp
 import { PlayerEditComponent } from './player/player-edit/player-edit.component';
 import { PlayerRegisterComponent } from './player/player-register/player-register.component';
 
+//Tournaments
+import {TournamentListComponent} from './tournament/tournament-list/tournament-list.component';
+import {TournamentCreateComponent} from './tournament/tournament-create/tournament-create.component';
+
 const routes: Routes = [
   {path: 'players/register', component: PlayerRegisterComponent},
   {path: 'players/:id/edit', component: PlayerEditComponent, canActivate: [PlayerGuard]},
@@ -17,7 +21,12 @@ const routes: Routes = [
   {path: 'players', component: PlayerListComponent, canActivate: [LoggedInGuard]},
   {path: 'about', component: AboutComponent},
   {path: '', redirectTo: 'about', pathMatch: 'full'},
+
+  //Tournaments
+  {path: 'tournaments',component: TournamentListComponent},
+  {path: 'tournaments/new',component: TournamentCreateComponent},
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

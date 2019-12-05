@@ -13,7 +13,7 @@ export class TournamentCreateComponent implements OnInit {
 
   public tournament: Tournament;
 
-  constructor( private router: Router,private teamService:TournamentServiceService) { }
+  constructor( private router: Router,private tournamentService:TournamentServiceService) { }
 
   ngOnInit() {
     this.tournament = new Tournament();
@@ -21,7 +21,7 @@ export class TournamentCreateComponent implements OnInit {
 
 
   onSubmit():void{
-    this.teamService.create(this.tournament).subscribe((team: Tournament) => this.router.navigate(['/tournaments'])); // ruta API-post
+    this.tournamentService.create(this.tournament).subscribe((tournament: Tournament) => this.router.navigate(['/tournaments'])); // ruta API-post
   }
   
 }

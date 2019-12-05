@@ -35,6 +35,15 @@ import { PlayerRegisterComponent } from './player/player-register/player-registe
 import { PlayerEditComponent } from './player/player-edit/player-edit.component';
 import { PlayerSearchComponent } from './player/player-search/player-search.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { TournamentListComponent } from './tournament/tournament-list/tournament-list.component';
+//import { TournamentDetailComponent } from './tournament/tournament-detail/tournament-detail.component';
+
+
+//Angular material imports to tournament
+import {MatTableModule} from '@angular/material/table'
+//import { TournamentEditComponent } from './tournament/tournament-edit/tournament-edit.component';
+import { TournamentCreateComponent } from './tournament/tournament-create/tournament-create.component';
+//import { TournamentDeleteComponent } from './tournament/tournament-delete/tournament-list.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +56,12 @@ import { MatDialogModule } from '@angular/material/dialog';
     PlayerRegisterComponent,
     PlayerEditComponent,
     PlayerSearchComponent,
+
+    TournamentListComponent,
+    //TournamentDetailComponent,
+    //TournamentEditComponent,
+    TournamentCreateComponent,
+    //TournamentDeleteComponent,
   ],
   imports: [
     BrowserModule,
@@ -69,7 +84,11 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatSidenavModule,
     MatCardModule,
     MatPaginatorModule,
-    MatDialogModule
+    MatDialogModule,
+
+    //Agular TableModule
+    MatTableModule,
+
   ],
   providers: [
     { provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: { duration: 5000 } },

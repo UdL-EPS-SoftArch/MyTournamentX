@@ -7,6 +7,8 @@ import {Tournament} from './tournament';
 })
 export class TournamentServiceService extends RestService<Tournament> {
 
+  private tournamentsUrl = 'http://localhost:8080/tournaments';
+
   constructor(injector: Injector) {
     super(Tournament, 'tournaments', injector);
   }

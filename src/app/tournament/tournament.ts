@@ -9,7 +9,7 @@ export class Tournament extends Resource {
   type: string;
   description: string;
   minParticipants: number;
-  maxParticipant: number;
+  maxParticipants: number;
   minTeamPlayers: number;
   maxTeamPlayers: number;
   state: string;
