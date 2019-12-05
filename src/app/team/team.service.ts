@@ -26,12 +26,6 @@ export class TeamService extends RestService<Team>{
     return this.search('findTeamByName',options);
   }
 
- /* public findAll(): Observable <Team[]>{
-    const options: any = {params: [{key: 'id',value:name}]};
-    return this.search('findAll', options);
-  }*/
-
   
-
 }
 
