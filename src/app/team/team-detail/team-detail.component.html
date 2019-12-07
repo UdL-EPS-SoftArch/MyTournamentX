@@ -6,6 +6,8 @@
             <th scope="col">Level</th>
             <th scope="col">Maximum Players</th>
             <th scope="col">Team Leader</th>
+            <th></th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -15,6 +17,11 @@
             <td>{{team.level}}</td>
             <td>{{team.maxPlayers}}</td>
             <td>{{team.teamLeader}}</td>
+            <td><button id="editBtn" type="button" [routerLink]="['edit']"
+              class="btn m-1 btn-outline-success">Edit
+            </button></td>
+            <td> <button id="deleteBtn" type="button" [routerLink]="['delete']"
+              class="btn m-1 btn-outline-danger">Delete</button></td>
           </tr>
         </tbody>
       </table>
