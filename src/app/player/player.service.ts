@@ -1,7 +1,7 @@
 import { Injectable, Injector } from '@angular/core';
 import { Observable } from 'rxjs';
 import { RestService } from '@lagoshny/ngx-hal-client';
-import { Player } from './player';
+import { Player } from '../shared/models/player';
 
 @Injectable()
 export class PlayerService extends RestService<Player> {

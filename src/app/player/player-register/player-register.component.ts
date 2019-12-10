@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PlayerService } from '../player.service';
-import { Player } from '../player';
+import { Player } from '../../shared/models/player';
 
 @Component({
   selector: 'app-player-register',
@@ -10,6 +10,7 @@ import { Player } from '../player';
 export class PlayerRegisterComponent implements OnInit {
   public player: Player;
   public registering = true;
+  public editing = false;
 
   constructor(private router: Router,
               private playerService: PlayerService) {
@@ -22,5 +23,8 @@ export class PlayerRegisterComponent implements OnInit {
   onSubmit(): void {
     this.playerService.create(this.player).subscribe(
       (player: Player) => this.router.navigate(['/login']));
+  }
+
+  onChange() {
   }
 }

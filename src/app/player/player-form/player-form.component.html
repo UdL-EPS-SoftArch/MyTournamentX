@@ -26,7 +26,12 @@
           <span *ngIf="email.hasError('email')">Please enter a valid email</span>
         </mat-error>
       </mat-form-field>
-      <mat-form-field fxLayout="column">
+      <mat-checkbox *ngIf="editing" 
+        [checked]="player.passwordReset"
+        (change)="onChange()">
+        Modify password
+      </mat-checkbox>
+      <mat-form-field fxLayout="column" *ngIf="(player.passwordReset && editing) || registering">
         <input id="password" name="password" type="password" matInput placeholder="Password"
                #password="ngModel" [(ngModel)]="player.password" required minlength="8"
                maxlength="256">
