@@ -4,15 +4,15 @@
   <fieldset>
 
     <!-- TeamName input -->
-    <div class="form-group" [class.was-validated]="id.dirty || id.touched">
+    <div class="form-group" >
       <label class="control-label" for="teamname"><strong>Team name:</strong></label>
       <input id="name" name="name" type="text" class="form-control" required
-             [(ngModel)]="team.name" #name="ngModel">
+             [(ngModel)]="team.id" #name="ngModel">
       <div class="invalid-feedback">A Team Name is required</div>
     </div>
 
     <!-- Game input -->
-    <div class="form-group" [class.was-validated]="game.dirty || game.touched">
+    <div class="form-group" >
         <label class="control-label" for="game"><strong>Game:</strong></label>
         <input id="game" name="game" type="text" class="form-control" required
                [(ngModel)]="team.game" #game="ngModel">
@@ -20,7 +20,7 @@
       </div>
 
     <!-- Level input -->
-    <div class="form-group" [class.was-validated]="level.dirty || level.touched">
+    <div class="form-group" >
         <label class="control-label" for="level"><strong>Level:</strong></label>
         <input id="level" name="level" type="text" class="form-control" required
                [(ngModel)]="team.level" #level="ngModel">
@@ -28,7 +28,7 @@
       </div>
       
     <!-- maxPlayers input -->
-    <div class="form-group" [class.was-validated]="maxPlayers.dirty || maxPlayers.touched">
+    <div class="form-group" >
         <label class="control-label" for="maxPlayers"><strong>Number of maximum players:</strong></label>
         <input id="maxPlayers" name="maxPlayers" type="text" class="form-control" required
                [(ngModel)]="team.maxPlayers" #maxPlayers="ngModel">
