@@ -1,0 +1,20 @@
+/*
+ * This is the css for match list.
+*/
+
+.match-container {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+/*DO NOT modify the id's or it stops working*/
+#title {
+  padding-top: 1rem;
+  font-weight: bold;
+}
+
+#content {
+  padding-top: .5rem;
+  font-size: 2rem;
+}
+

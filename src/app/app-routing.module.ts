@@ -8,8 +8,10 @@ import { PlayerDetailComponent } from './player/player-detail/player-detail.comp
 import { PlayerDeleteComponent } from './player/player-delete/player-delete.component';
 import { PlayerEditComponent } from './player/player-edit/player-edit.component';
 import { PlayerRegisterComponent } from './player/player-register/player-register.component';
+import { MatchListComponent } from './match/match-list/match-list.component';
 
 const routes: Routes = [
+  {path: 'test', component: MatchListComponent},
   {path: 'players/register', component: PlayerRegisterComponent},
   {path: 'players/:id/edit', component: PlayerEditComponent, canActivate: [PlayerGuard]},
   {path: 'players/:id/delete', component: PlayerDeleteComponent, canActivate: [PlayerGuard]},
