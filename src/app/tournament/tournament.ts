@@ -20,6 +20,9 @@ export class Tournament extends Resource {
   createdAt: Date;
   limitDate: Date;
 
+  //URI
+  uri: string;
+
   constructor() {
     super();
   }

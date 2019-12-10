@@ -26,6 +26,14 @@
         <div class="invalid-feedback">A Game is required</div>
     </div>
     
+    <!-- bestOf input -->
+    <div class="form-group" [class.was-validated]="state.dirty || state.touched">
+        <label class="control-label" for="state"><strong>bestOf:</strong></label>
+        <input id="bestOf" name="bestOf" type="text" class="form-control" required
+                [(ngModel)]="tournament.bestOf" #type="ngModel">
+        <div class="invalid-feedback">A bestOf is required</div>
+    </div>
+    
     <!-- Type input -->
     <div class="form-group" [class.was-validated]="type.dirty || type.touched">
         <label class="control-label" for="type"><strong>Type:</strong></label>
@@ -84,7 +92,7 @@
 
     <!-- Button -->
     <div class="form-group">
-      <button id="submit" type="submit" class="btn m-1 btn-success pull-right" [routerLink]="['/tournaments']" [disabled]="!form.form.valid">Create</button> <!--routa de creació-->
+      <button id="submit" type="submit" class="btn m-1 btn-success pull-right" [disabled]="!form.form.valid">Create</button> <!--ruta de creació-->
       <button id="listBtn" type="button" [routerLink]="['']" class="btn m-1 btn-outline-primary pull-right">Back</button>
     </div>
 
