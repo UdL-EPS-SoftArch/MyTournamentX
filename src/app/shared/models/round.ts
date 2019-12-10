@@ -9,6 +9,8 @@ export class Round extends Resource {
   winner: Team;
   nextRound: Round;
   tournament: Tournament;
+  rivals: Team[];
+  uri: string;
 
   constructor() {
     super();
