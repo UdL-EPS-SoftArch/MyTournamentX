@@ -3,7 +3,7 @@ import { Team } from '../team';
 import { Router, ActivatedRoute } from '@angular/router';
 import { TeamService } from '../team.service';
 import { flatMap } from 'rxjs/operators';
-import { Player } from 'src/app/player/player';
+import { Player } from 'src/app/shared/models/player';
 
 @Component({
   selector: 'app-team-detail',
@@ -13,9 +13,9 @@ import { Player } from 'src/app/player/player';
 export class TeamDetailComponent implements OnInit {
 
   public team: Team = new Team();
-  //public leader: Player= new Player();
-  
-  constructor( private router: Router, private route: ActivatedRoute,private teamService: TeamService) { }
+  // public leader: Player= new Player();
+
+  constructor( private router: Router, private route: ActivatedRoute, private teamService: TeamService) { }
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
@@ -24,7 +24,7 @@ export class TeamDetailComponent implements OnInit {
         this.team = team;
         return team.getRelation(Player, 'teamLeader');
        }),
-       //flatMap(leader => this.team)
+       // flatMap(leader => this.team)
     ).subscribe( );
   }
 

@@ -11,7 +11,7 @@ import { Team } from '../team';
 export class TeamDeleteComponent implements OnInit {
 
   public team: Team = new Team();
-  constructor(private router: Router,private route: ActivatedRoute,private teamService:TeamService ) { }
+  constructor(private router: Router, private route: ActivatedRoute, private teamService: TeamService ) { }
 
   ngOnInit() {
 

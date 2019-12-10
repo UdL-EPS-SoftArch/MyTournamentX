@@ -13,15 +13,15 @@ export class TeamCreateComponent implements OnInit {
 
   public team: Team;
 
-  constructor( private router: Router,private teamService:TeamService) { }
+  constructor( private router: Router, private teamService: TeamService ) { }
 
   ngOnInit() {
     this.team = new Team();
   }
 
 
-  onSubmit():void{
+  onSubmit(): void {
     this.teamService.create(this.team).subscribe((team: Team) => this.router.navigate(['/teams'])); // apartir de => ruta del client-site
   }
-  
+
 }

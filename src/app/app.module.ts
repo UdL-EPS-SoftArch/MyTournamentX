@@ -38,7 +38,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { TeamListComponent } from './team/team-list/team-list.component';
 import { TeamDetailComponent } from './team/team-detail/team-detail.component';
 
-//Angular Material imports to team
+// Angular Material imports to team
 import {MatTableModule} from '@angular/material/table';
 import { TeamEditComponent } from './team/team-edit/team-edit.component';
 import { TeamCreateComponent } from './team/team-create/team-create.component';
@@ -84,7 +84,7 @@ import { TeamDeleteComponent } from './team/team-delete/team-delete.component';
     MatPaginatorModule,
     MatDialogModule,
 
-    //Angular Table Module
+    // Angular Table Module
     MatTableModule,
 
   ],
