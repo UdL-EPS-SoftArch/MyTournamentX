@@ -23,7 +23,7 @@ export class TeamEditComponent implements OnInit {
   }
 
   public onSubmit(): void {
-    this.teamService.update(this.team).subscribe((team: Team) => this.router.navigate[team.uri]);
+    this.teamService.update(this.team).subscribe((team: Team) => this.router.navigate([team.uri]));
   }
   goBack() {
     this.location.back();
