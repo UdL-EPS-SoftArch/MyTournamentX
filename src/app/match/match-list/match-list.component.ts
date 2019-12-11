@@ -4,7 +4,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { MatchServiceService } from '../../shared/services/match-service.service'
 import { Match } from '../../shared/models/match';
 import { Round } from '../../shared/models/round';
-import { Team } from 'src/app/shared/models/team';
 
 @Component({
   selector: 'app-match-list',
@@ -12,19 +11,36 @@ import { Team } from 'src/app/shared/models/team';
   templateUrl: './match-list.component.html'
 })
 export class MatchListComponent implements OnInit {
-    private matches: Match[] = [{} as Match, {} as Match];
+    private matches: Match[];
     private round: Round = new Round();
 
     constructor(private route: ActivatedRoute,
                 private router: Router,
                 //private round: Round,
                 private matchService: MatchServiceService) {
-                  this.round.uri = "/rounds/1";
-                  this.round.bestOf = 3;
-                  this.round.numTeams = 2;
     }
 
   ngOnInit() {
+    this.round.uri = 'http://localhost:8080/rounds/1';
+
+
+    this.matchService.findByRound(this.round.uri).subscribe(
+      matches => {
+        console.log(this.matches);
+        /*
+        matches.map(match => {
+          this.matchService.findById(match.uri).subscribe(
+            matchObject => {
+               this.matches.push(matchObject[0]);
+               console.log(matchObject);
+               console.log(this.matches);
+            }
+          );
+        });*/
+      });
+  }
+}
+
 /*
     const team1 = new Team();
     team1.name = "Patata 1";
@@ -42,9 +58,3 @@ export class MatchListComponent implements OnInit {
 
     this.matches[1] = this.matches[0];
 */
-
-    this.matchService.findByRound(this.round.uri).subscribe(
-      matches => this.matches = matches);
-
-  }
-}
