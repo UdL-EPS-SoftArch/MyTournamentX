@@ -43,6 +43,7 @@ import {MatTableModule} from '@angular/material/table';
 import { TeamEditComponent } from './team/team-edit/team-edit.component';
 import { TeamCreateComponent } from './team/team-create/team-create.component';
 import { TeamDeleteComponent } from './team/team-delete/team-delete.component';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -86,6 +87,7 @@ import { TeamDeleteComponent } from './team/team-delete/team-delete.component';
 
     // Angular Table Module
     MatTableModule,
+    MatSelectModule,
 
   ],
   providers: [
