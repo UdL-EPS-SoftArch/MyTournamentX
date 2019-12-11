@@ -1,15 +1,15 @@
-<h4>Edit team: {{team.id}}</h4>
+<h4>Edit team: {{team.name}}</h4>
 
 <form id="teamEditForm" (ngSubmit)="onSubmit()" #form="ngForm">
   <fieldset>
 
-    <!-- TeamName input -->
+    <!-- TeamName input 
     <div class="form-group">
         <label class="control-label" for="teamname"><strong>Team name:</strong></label>
         <input id="name" name="name" type="text" class="form-control" required
-               [(ngModel)]="team.id" #name="ngModel">
+               [(ngModel)]="team.name" #name="ngModel">
         <div class="invalid-feedback">A Team Name is required</div>
-      </div>
+      </div>-->
   
       <!-- Game input -->
       <div class="form-group" >
@@ -38,7 +38,7 @@
     <!-- Button -->
     <div class="form-group">
       <button id="back" type="button" class="btn btn-outline-danger pull-right" (click)="goBack()">Cancel</button>
-      <button id="submit" type="submit" class="btn btn-success pull-right marged-left" (click)="goBack()">Edit</button>
+      <button id="submit" type="submit" class="btn btn-success pull-right marged-left" >Edit</button>
     </div>
 
   </fieldset>
