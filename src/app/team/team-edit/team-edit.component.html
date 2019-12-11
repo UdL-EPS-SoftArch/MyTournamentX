@@ -1,4 +1,4 @@
-<h4>Edit team: {{team.name}}</h4>
+<h4>Edit team: {{team.id}}</h4>
 
 <form id="teamEditForm" (ngSubmit)="onSubmit()" #form="ngForm">
   <fieldset>
@@ -7,7 +7,7 @@
     <div class="form-group">
         <label class="control-label" for="teamname"><strong>Team name:</strong></label>
         <input id="name" name="name" type="text" class="form-control" required
-               [(ngModel)]="team.name" #name="ngModel">
+               [(ngModel)]="team.id" #name="ngModel">
         <div class="invalid-feedback">A Team Name is required</div>
       </div>-->
   
