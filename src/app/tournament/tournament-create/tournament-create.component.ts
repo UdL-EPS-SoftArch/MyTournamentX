@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit, Injectable } from '@angular/core';
 import { Tournament } from '../tournament';
 import { Router } from '@angular/router';
@@ -13,15 +14,17 @@ export class TournamentCreateComponent implements OnInit {
 
   public tournament: Tournament;
 
-  constructor( private router: Router, private tournamentService:TournamentServiceService) { }
+  constructor( private router: Router, private tournamentService:TournamentServiceService, private location: Location) { }
 
   ngOnInit() {
     this.tournament = new Tournament();
   }
 
 
-  onSubmit():void{
+  public onSubmit():void{
     this.tournamentService.create(this.tournament).subscribe((tournament: Tournament) => this.router.navigate(['/tournaments'])); // ruta API-post
   }
-  
+  goBack() {
+    this.location.back();
+  }
 }

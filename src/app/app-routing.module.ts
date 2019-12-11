@@ -12,6 +12,8 @@ import { PlayerRegisterComponent } from './player/player-register/player-registe
 //Tournaments
 import {TournamentListComponent} from './tournament/tournament-list/tournament-list.component';
 import {TournamentCreateComponent} from './tournament/tournament-create/tournament-create.component';
+import {TournamentEditComponent} from './tournament/tournament-edit/tournament-edit.component';
+import {TournamentDetailComponent} from './tournament/tournament-detail/tournament-detail.component';
 
 const routes: Routes = [
   {path: 'players/register', component: PlayerRegisterComponent},
@@ -25,6 +27,8 @@ const routes: Routes = [
   //Tournaments
   {path: 'tournaments',component: TournamentListComponent},
   {path: 'tournaments/new',component: TournamentCreateComponent},
+  {path: 'tournaments/edit',component: TournamentEditComponent},
+  {path: 'tournaments/detail',component: TournamentDetailComponent},
 ];
 
 
