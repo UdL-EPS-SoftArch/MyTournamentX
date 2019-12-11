@@ -7,7 +7,7 @@
     <div class="form-group">
         <label class="control-label" for="teamname"><strong>Team name:</strong></label>
         <input id="name" name="name" type="text" class="form-control" required
-               [(ngModel)]="team.id" #name="ngModel">
+               [(ngModel)]="team.name" #name="ngModel">
         <div class="invalid-feedback">A Team Name is required</div>
       </div>-->
   
@@ -20,12 +20,17 @@
         </div>
   
       <!-- Level input -->
-      <div class="form-group">
-          <label class="control-label" for="level"><strong>Level:</strong></label>
-          <input id="level" name="level" type="text" class="form-control" required
-                 [(ngModel)]="team.level" #level="ngModel">
-          <div class="invalid-feedback">A Level is required</div>
-        </div>
+      <div class="form-group" >
+        <label class="control-label" for="level"><strong>Level:</strong></label>
+        <mat-form-field>
+          <mat-select [(value)]="team.level">
+            <mat-option value="Amateur">Amateur</mat-option>
+            <mat-option value="Professional">Professional</mat-option>
+            <mat-option value="Medium">Medium</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div class="invalid-feedback">A Level is required</div>
+      </div>
         
       <!-- maxPlayers input -->
       <div class="form-group">
