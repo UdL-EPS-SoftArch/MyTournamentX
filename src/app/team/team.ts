@@ -4,7 +4,7 @@ import { Player } from 'src/app/shared/models/player';
 
 
 export class Team extends Resource {
-    id:string;
+    id: string;
     name: string; // name of the team
     // ATRIBUTES
     level: string;
