@@ -12,8 +12,13 @@ export class MatchServiceService extends RestService<Match> {
     super(Match, 'matches', injector);
   }
 
-  public findByRound(text: string): Observable<Match[]> {
-    const options: any = {params: [{key: 'text', value: text}]};
+  public findByRound(uri: string): Observable<Match[]> {
+    const options: any = {params: [{key: 'id', value: uri}]};
     return this.search('findByRound', options);
+  }
+
+  public findById(uri: string): Observable<Match[]> {
+    const options: any = {params: [{key: 'id', value: uri}]};
+    return this.search('findById', options);
   }
 }
