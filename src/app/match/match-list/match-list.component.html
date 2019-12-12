@@ -5,9 +5,10 @@
     <h3 id="title" matLine>Match {{j+1}}</h3>
     <div matLine id="content">
       <span *ngFor="let team of round.rivals; let i=index">
-          <a routerLink="/teams/{{team.name}}" routerLinkActive="active">{{team.name}}</a>
+          <a routerLink="/teams/{{team.id}}" routerLinkActive="active">{{team.id}}</a>
           <span *ngIf="i < (round.numTeams - 1)">&nbsp; VS &nbsp;</span>
       </span>
     </div>
   </mat-list-item>
+  <mat-divider></mat-divider>
 </mat-list>
