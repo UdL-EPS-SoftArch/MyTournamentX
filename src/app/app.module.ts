@@ -15,6 +15,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
+import {MatDividerModule} from '@angular/material/divider';
 
 import { ErrorHandlerModule } from './error-handler/error-handler.module';
 import { HttpErrorInterceptor } from './error-handler/http-error-interceptor';
@@ -36,6 +37,8 @@ import { PlayerEditComponent } from './player/player-edit/player-edit.component'
 import { PlayerSearchComponent } from './player/player-search/player-search.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatchListComponent } from './match/match-list/match-list.component';
+import { RoundDetailComponent } from './round/round-detail/round-detail.component';
+import { RoundListComponent } from './round/round-list/round-list.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +51,9 @@ import { MatchListComponent } from './match/match-list/match-list.component';
     PlayerRegisterComponent,
     PlayerEditComponent,
     PlayerSearchComponent,
-    MatchListComponent
+    MatchListComponent,
+    RoundDetailComponent,
+    RoundListComponent
   ],
   imports: [
     BrowserModule,
@@ -71,7 +76,8 @@ import { MatchListComponent } from './match/match-list/match-list.component';
     MatSidenavModule,
     MatCardModule,
     MatPaginatorModule,
-    MatDialogModule
+    MatDialogModule,
+    MatDividerModule
   ],
   providers: [
     { provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: { duration: 5000 } },

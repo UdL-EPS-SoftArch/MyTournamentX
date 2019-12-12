@@ -8,10 +8,12 @@ import { PlayerDetailComponent } from './player/player-detail/player-detail.comp
 import { PlayerDeleteComponent } from './player/player-delete/player-delete.component';
 import { PlayerEditComponent } from './player/player-edit/player-edit.component';
 import { PlayerRegisterComponent } from './player/player-register/player-register.component';
-import { MatchListComponent } from './match/match-list/match-list.component';
+import { RoundListComponent } from './round/round-list/round-list.component';
+import { RoundDetailComponent } from './round/round-detail/round-detail.component';
 
 const routes: Routes = [
-  {path: 'test', component: MatchListComponent},
+  {path: 'tournaments/:id/rounds/', component: RoundListComponent},
+  {path: 'rounds/:id', component: RoundDetailComponent},
   {path: 'players/register', component: PlayerRegisterComponent},
   {path: 'players/:id/edit', component: PlayerEditComponent, canActivate: [PlayerGuard]},
   {path: 'players/:id/delete', component: PlayerDeleteComponent, canActivate: [PlayerGuard]},
