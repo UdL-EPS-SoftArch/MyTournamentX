@@ -13,7 +13,7 @@ export class MatchServiceService extends RestService<Match> {
   }
 
   public findByRound(uri: string): Observable<Match[]> {
-    const options: any = {params: [{key: 'id', value: uri}]};
+    const options: any = {params: [{key: 'round', value: uri}]};
     return this.search('findByRound', options);
   }
 
