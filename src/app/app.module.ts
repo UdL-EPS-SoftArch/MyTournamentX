@@ -36,6 +36,7 @@ import { PlayerEditComponent } from './player/player-edit/player-edit.component'
 import { PlayerSearchComponent } from './player/player-search/player-search.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import {TeamInvitationDetailComponent} from './teamInvitation/teamInvitation-detail/teamInvitation-detail.component';
+import {TeamInvitationCreateComponent} from './teamInvitation/teamInvitation-create/teamInvitation-create.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import {TeamInvitationDetailComponent} from './teamInvitation/teamInvitation-det
     PlayerRegisterComponent,
     PlayerEditComponent,
     PlayerSearchComponent,
-    TeamInvitationDetailComponent
+    TeamInvitationDetailComponent,
+    TeamInvitationCreateComponent
   ],
   imports: [
     BrowserModule,
