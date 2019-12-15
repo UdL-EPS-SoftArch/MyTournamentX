@@ -1,0 +1,10 @@
+<!--This is the html for match list.-->
+
+<mat-list>
+    <mat-list-item class="match-container" *ngFor="let round of rounds; let j=index">
+      <div matLine id="content">
+        <a routerLink="/rounds/{{round.id}}" routerLinkActive="active">Round {{j + 1}}</a>
+      </div>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+  </mat-list>

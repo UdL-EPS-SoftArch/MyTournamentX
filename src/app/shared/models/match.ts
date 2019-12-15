@@ -7,6 +7,8 @@ export class Match extends Resource {
   description: string;
   winner: Team;
   round: Round;
+  uri: string;
+  hasWinner: boolean;
 
   constructor() {
     super();
