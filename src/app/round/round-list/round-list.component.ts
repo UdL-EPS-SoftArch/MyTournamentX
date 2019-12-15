@@ -10,7 +10,7 @@ import { Round } from '../../shared/models/round';
   templateUrl: './round-list.component.html'
 })
 export class RoundListComponent implements OnInit {
-    private rounds: Round[];
+    rounds: Round[];
 
     @Input() tournamentId: string;
 

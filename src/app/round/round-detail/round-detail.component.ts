@@ -11,8 +11,8 @@ import { Team } from 'src/app/shared/models/team';
   templateUrl: './round-detail.component.html'
 })
 export class RoundDetailComponent implements OnInit {
-    private round: Round;
-    private id =  '';
+    round: Round;
+    id =  '';
     constructor(private route: ActivatedRoute,
                 private router: Router,
                 private roundService: RoundServiceService) {
