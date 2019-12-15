@@ -19,14 +19,9 @@ export class TeamDetailComponent implements OnInit {
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
-    this.teamService.get(id).pipe(
-      flatMap(team => {
-        this.team = team;
-        return team.getRelation(Player, 'teamLeader');
-       }),
-       // flatMap(leader => this.team)
-    ).subscribe( );
+    this.teamService.get(id).subscribe((team: Team) => {
+      this.team = team;
+      team.getRelation(Player, 'leader').subscribe((leader: Player) => this.team.leader = leader);
+    });
   }
-
-
 }
