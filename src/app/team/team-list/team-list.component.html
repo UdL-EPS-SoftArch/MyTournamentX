@@ -1,0 +1,13 @@
+
+   <table mat-table [dataSource]="teamList" class="mat-elevation-z8">
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> Team name </th>
+      <td mat-cell *matCellDef="let team" [routerLink]="[team.uri]"> {{team.id}} </td>
+    </ng-container>
+       
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns ;" class="teams-element-row"></tr>
+    
+  </table>

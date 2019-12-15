@@ -9,6 +9,14 @@ import { PlayerDeleteComponent } from './player/player-delete/player-delete.comp
 import { PlayerEditComponent } from './player/player-edit/player-edit.component';
 import { PlayerRegisterComponent } from './player/player-register/player-register.component';
 
+// Teams
+import { TeamListComponent} from './team/team-list/team-list.component';
+import { TeamDetailComponent } from './team/team-detail/team-detail.component';
+import { TeamCreateComponent } from './team/team-create/team-create.component';
+import { TeamEditComponent } from './team/team-edit/team-edit.component';
+import { TeamDeleteComponent } from './team/team-delete/team-delete.component';
+
+
 const routes: Routes = [
   {path: 'players/register', component: PlayerRegisterComponent},
   {path: 'players/:id/edit', component: PlayerEditComponent, canActivate: [PlayerGuard]},
@@ -17,6 +25,12 @@ const routes: Routes = [
   {path: 'players', component: PlayerListComponent, canActivate: [LoggedInGuard]},
   {path: 'about', component: AboutComponent},
   {path: '', redirectTo: 'about', pathMatch: 'full'},
+  // Team
+  {path: 'teams', component: TeamListComponent},
+  {path: 'teams/new', component: TeamCreateComponent},
+  {path: 'teams/:id/edit', component: TeamEditComponent},
+  {path: 'teams/:id/delete', component: TeamDeleteComponent},
+  {path: 'teams/:id', component: TeamDetailComponent},
 ];
 
 @NgModule({
