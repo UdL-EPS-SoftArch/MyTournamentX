@@ -1,5 +1,5 @@
   <div class="container-fluid" style="padding-top: 2%;">
-    
+
     <table class="table table-hover">
       <thead class="thead-dark">
         <tr>
@@ -18,7 +18,7 @@
           <td>{{team.game}}</td>
           <td>{{team.level}}</td>
           <td>{{team.maxPlayers}}</td>
-          <td>{{team.teamLeader}}</td>
+          <td>{{team.leader?.id}}</td>
           <td><button id="editBtn" type="button" [routerLink]="['edit']"
             class="btn m-1 btn-outline-success">Edit
           </button></td>

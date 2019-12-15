@@ -10,8 +10,8 @@ export class Team extends Resource {
     level: string;
     game: string;
     maxPlayers: number;
-    teamLeader: Player;
-    playersList: Player[];
+    leader: Player;
+    players: Player[];
     // URI
     uri: string;
     /*constructor(values: Object = {}){
