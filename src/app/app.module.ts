@@ -46,6 +46,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatchListComponent } from './match/match-list/match-list.component';
 import { RoundDetailComponent } from './round/round-detail/round-detail.component';
 import { RoundListComponent } from './round/round-list/round-list.component';
+import { TournamentInvitationComponent } from './tournament-invitation/tournament-invitation.component';
+// tslint:disable-next-line: max-line-length
+import { TournamentInvitationCreateComponent } from './TournamentInvitation/tournament-invitation-create/tournament-invitation-create.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +68,8 @@ import { RoundListComponent } from './round/round-list/round-list.component';
     TeamDeleteComponent,
     MatchListComponent,
     RoundDetailComponent,
-    RoundListComponent
+    RoundListComponent,
+    TournamentInvitationCreateComponent
   ],
   imports: [
     BrowserModule,
