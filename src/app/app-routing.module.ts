@@ -17,6 +17,7 @@ import { TeamDetailComponent } from './team/team-detail/team-detail.component';
 import { TeamCreateComponent } from './team/team-create/team-create.component';
 import { TeamEditComponent } from './team/team-edit/team-edit.component';
 import { TeamDeleteComponent } from './team/team-delete/team-delete.component';
+import {MatchResultListComponent} from "./matchresult/match-result-list/match-result-list.component";
 
 
 const routes: Routes = [
@@ -35,6 +36,8 @@ const routes: Routes = [
   {path: 'teams/:id/edit', component: TeamEditComponent},
   {path: 'teams/:id/delete', component: TeamDeleteComponent},
   {path: 'teams/:id', component: TeamDetailComponent},
+  //matchResult
+  {path: 'matchresults', component: MatchResultListComponent},
 ];
 
 @NgModule({

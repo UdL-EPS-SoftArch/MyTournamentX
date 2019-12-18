@@ -46,6 +46,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatchListComponent } from './match/match-list/match-list.component';
 import { RoundDetailComponent } from './round/round-detail/round-detail.component';
 import { RoundListComponent } from './round/round-list/round-list.component';
+import { MatchResultDetailComponent } from './matchresult/match-result-detail/match-result-detail.component';
+import { MatchResultListComponent } from './matchresult/match-result-list/match-result-list.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +67,9 @@ import { RoundListComponent } from './round/round-list/round-list.component';
     TeamDeleteComponent,
     MatchListComponent,
     RoundDetailComponent,
-    RoundListComponent
+    RoundListComponent,
+    MatchResultDetailComponent,
+    MatchResultListComponent
   ],
   imports: [
     BrowserModule,

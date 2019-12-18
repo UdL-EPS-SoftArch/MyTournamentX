@@ -28,6 +28,11 @@
             <!--<button mat-menu-item [routerLink]="'/teams/:id'">My Teams</button>-->
             <button mat-menu-item [routerLink]="'/teams/new'">Create Team</button>
           </mat-menu>
+          <button style="margin-left: 15px;"mat-icon-button [matMenuTriggerFor]="matchResultMenu">MatchResults</button>
+          <mat-menu #matchResultMenu="matMenu">
+            <button mat-menu-item [routerLink]="'/matchresults'">List Teams</button>
+          </mat-menu>
+
 
         </div>
         <span class="menu-spacer"></span>
