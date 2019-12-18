@@ -39,6 +39,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatchListComponent } from './match/match-list/match-list.component';
 import { RoundDetailComponent } from './round/round-detail/round-detail.component';
 import { RoundListComponent } from './round/round-list/round-list.component';
+import { TournamentDetailComponent } from './tournament/tournament-detail/tournament-detail.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { RoundListComponent } from './round/round-list/round-list.component';
     PlayerSearchComponent,
     MatchListComponent,
     RoundDetailComponent,
-    RoundListComponent
+    RoundListComponent,
+    TournamentDetailComponent
   ],
   imports: [
     BrowserModule,

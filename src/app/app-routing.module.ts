@@ -10,8 +10,10 @@ import { PlayerEditComponent } from './player/player-edit/player-edit.component'
 import { PlayerRegisterComponent } from './player/player-register/player-register.component';
 import { RoundListComponent } from './round/round-list/round-list.component';
 import { RoundDetailComponent } from './round/round-detail/round-detail.component';
+import { TournamentDetailComponent } from './tournament/tournament-detail/tournament-detail.component';
 
 const routes: Routes = [
+  {path: 'tournaments/:id', component: TournamentDetailComponent},
   {path: 'tournaments/:id/rounds/', component: RoundListComponent},
   {path: 'rounds/:id', component: RoundDetailComponent},
   {path: 'players/register', component: PlayerRegisterComponent},
