@@ -14,7 +14,7 @@ import { TournamentServiceService } from 'src/app/shared/services/tournament-ser
 })
 export class TournamentInvitationCreateComponent implements OnInit {
 
-  public tournamentInvitation: TournamentInvitation;
+  public tournamentInvitation: TournamentInvitation = new TournamentInvitation();
   public teams: Team[] = [];
   public listTournament: Tournament[] = [];
   public selectedTeam: string;
@@ -29,12 +29,12 @@ export class TournamentInvitationCreateComponent implements OnInit {
     this.teamService.getAll()
     .subscribe((teams: Team[]) => {this.teams = teams; });
 
-    this.tournamentInvitation = new TournamentInvitation();
+   // this.tournamentInvitation = new TournamentInvitation();
   }
 
   onSubmit(): void {
     // tslint:disable-next-line: max-line-length
-    this.tournamentinvitationService.create(this.tournamentInvitation).subscribe((tournamentinvitation: TournamentInvitation) => this.router.navigate(['/tournamentinvitation'])); // apartir de => ruta del client-site
+    this.tournamentinvitationService.create(this.tournamentInvitation).subscribe((tournamentInvitations: TournamentInvitation) => this.router.navigate([''])); // apartir de => ruta del client-site
   }
 
 }

@@ -9,7 +9,7 @@ import { Observable } from 'rxjs/internal/Observable';
 export class TournamentInvitationService extends RestService<TournamentInvitation> {
 
   constructor(injector: Injector) {
-    super(TournamentInvitation, 'tournamentinvitation', injector);
+    super(TournamentInvitation, 'tournamentInvitations', injector);
    }
 
    public findTournamentInvitationByMessage(message: string): Observable <TournamentInvitation[]> {
