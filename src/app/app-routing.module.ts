@@ -17,9 +17,8 @@ import { TeamDetailComponent } from './team/team-detail/team-detail.component';
 import { TeamCreateComponent } from './team/team-create/team-create.component';
 import { TeamEditComponent } from './team/team-edit/team-edit.component';
 import { TeamDeleteComponent } from './team/team-delete/team-delete.component';
-import { TournamentInvitationComponent } from './tournament-invitation/tournament-invitation.component';
 // tslint:disable-next-line: max-line-length
-import { TournamentInvitationCreateComponent } from './TournamentInvitation/tournament-invitation-create/tournament-invitation-create.component';
+import { TournamentInvitationCreateComponent } from './tournament-invitation/tournament-invitation-create/tournament-invitation-create.component';
 
 
 const routes: Routes = [
