@@ -11,13 +11,18 @@
         <div class="invalid-feedback">A Tournament Name is required</div>
     </div>
   
-    <!-- Level input -->
+    <!-- Level input 
     <div class="form-group">
         <label class="control-label" for="level"><strong>Level:</strong></label>
-        <input id="level" name="level" type="text" class="form-control" required
-            [(ngModel)]="team.level" #level="ngModel">
+        <mat-form-field>
+            <mat-select [(value)]="tournament.level">
+              <mat-option value="Amateur">Amateur</mat-option>
+              <mat-option value="Professional">Professional</mat-option>
+              <mat-option value="Beginner">Beginner</mat-option>
+            </mat-select>
+        </mat-form-field>
         <div class="invalid-feedback">A Level is required</div>
-    </div>
+    </div>-->
       
     <!-- Game input -->
     <div class="form-group" >

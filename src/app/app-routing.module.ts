@@ -27,8 +27,8 @@ const routes: Routes = [
   //Tournaments
   {path: 'tournaments',component: TournamentListComponent},
   {path: 'tournaments/new',component: TournamentCreateComponent},
-  {path: 'tournaments/edit',component: TournamentEditComponent},
-  {path: 'tournaments/detail',component: TournamentDetailComponent},
+  {path: 'tournaments/:id/edit',component: TournamentEditComponent},
+  {path: 'tournaments/:id',component: TournamentDetailComponent},
 ];
 
 
