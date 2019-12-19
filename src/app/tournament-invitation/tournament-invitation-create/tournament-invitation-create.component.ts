@@ -17,16 +17,17 @@ export class TournamentInvitationCreateComponent implements OnInit {
   public tournamentInvitation: TournamentInvitation;
   public teams: Team[] = [];
   public listTournament: Tournament[] = [];
+  public selectedTeam: string;
 
   // tslint:disable-next-line: max-line-length
   constructor( private router: Router, private tournamentService: TournamentServiceService , private teamService: TeamService, private tournamentinvitationService: TournamentInvitationService ) { }
 
   ngOnInit() {
+    this.tournamentService.getAll()
+    .subscribe((listTournament: Tournament[]) => {this.listTournament = listTournament; });
+
     this.teamService.getAll()
     .subscribe((teams: Team[]) => {this.teams = teams; });
-
-    this.tournamentService.getAll()
-    .subscribe((listTournament: Tournament[]) => {this.listTournament = listTournament; } );
 
     this.tournamentInvitation = new TournamentInvitation();
   }
