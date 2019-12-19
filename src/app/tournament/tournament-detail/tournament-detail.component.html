@@ -1,4 +1,73 @@
-<h1>Tournament {{id}}</h1>
-<div class="info">
-    <div *ngIf="" class="tournament-winner">Tournament X</div>
-</div>
+<mat-card>
+    <mat-card-title>Tournament {{id}}</mat-card-title>
+    <div *ngIf="tournament" class="tournament-info">
+
+        <mat-card-title-group>Basic Tournament Information</mat-card-title-group>
+
+        <div class="main-info">
+            <div class="tournament-fields">
+                <span class="title">Level:</span>
+                <span class="content">{{tournament.level}}</span>
+            </div>
+
+            <div class="tournament-fields">
+                <span class="title">State:</span>
+                <span class="content">{{tournament.state}}</span>
+            </div>
+            <div class="tournament-fields">
+                <span class="title">Game:</span>
+                <span class="content">{{tournament.game}}</span>
+            </div>
+            <div class="tournament-fields">
+                <span class="title">Best of:</span>
+                <span class="content">{{tournament.bestOf}}</span>
+            </div>
+            <div class="tournament-fields">
+                <span class="title">Type:</span>
+                <span class="content">{{tournament.type}}</span>
+            </div>
+        </div>
+
+        <mat-divider></mat-divider>
+
+        
+
+        <mat-divider></mat-divider>
+
+    </div>
+</mat-card>
+
+<mat-card>
+    <div *ngIf="tournament" class="other-info">
+        <mat-card-title-group>Additional Information</mat-card-title-group>
+
+        <div class="tournament-fields">
+            <span class="title">Minim participants:</span>
+            <span class="content">{{tournament.minParticipants}}</span>
+        </div>
+        <div class="tournament-fields">
+            <span class="title">Maxim participants:</span>
+            <span class="content">{{tournament.maxParticipants}}</span>
+        </div>
+        <div class="tournament-fields">
+            <span class="title">Start date:</span>
+            <span class="content">{{tournament.startAt}}</span>
+        </div>
+        <div class="tournament-fields">
+            <span class="title">End time:</span>
+            <span class="content">{{tournament.finishedAt}}</span>
+        </div>
+        <div class="tournament-fields">
+            <span class="title">Limit date:</span>
+            <span class="content">{{tournament.limitDate}}</span>
+        </div>
+        <div class="tournament-fields">
+            <span class="title">Minim Team Players:</span>
+            <span class="content">{{tournament.minTeamPlayers}}</span>
+        </div>
+        <div class="tournament-fields">
+            <span class="title">Maxim Team Players:</span>
+            <span class="content">{{tournament.maxTeamPlayers}}</span>
+        </div>
+    </div>
+</mat-card>

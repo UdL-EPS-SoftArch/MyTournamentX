@@ -11,7 +11,7 @@ import { Team } from 'src/app/shared/models/team';
   templateUrl: './tournament-detail.component.html'
 })
 export class TournamentDetailComponent implements OnInit {
-    private tournament: Tournament;
+    private tournament?: Tournament;
     private id =  '';
     constructor(private route: ActivatedRoute,
                 private router: Router,
