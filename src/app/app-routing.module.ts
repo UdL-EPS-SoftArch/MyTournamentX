@@ -19,6 +19,8 @@ import { TeamEditComponent } from './team/team-edit/team-edit.component';
 import { TeamDeleteComponent } from './team/team-delete/team-delete.component';
 // tslint:disable-next-line: max-line-length
 import { TournamentInvitationCreateComponent } from './tournament-invitation/tournament-invitation-create/tournament-invitation-create.component';
+// tslint:disable-next-line: max-line-length
+import { TournamentInvitationDeleteComponent } from './tournament-invitation/tournament-invitation-delete/tournament-invitation-delete.component';
 
 
 const routes: Routes = [
@@ -38,7 +40,8 @@ const routes: Routes = [
   {path: 'teams/:id/delete', component: TeamDeleteComponent},
   {path: 'teams/:id', component: TeamDetailComponent},
   // TournamentInvitation
-  {path: 'tournaments/:id/invitate', component: TournamentInvitationCreateComponent}
+  {path: 'tournaments/:id/invitate', component: TournamentInvitationCreateComponent},
+  {path: 'tournaments/:id/delete', component: TournamentInvitationDeleteComponent}
 ];
 
 @NgModule({
