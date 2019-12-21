@@ -17,10 +17,13 @@ export class TournamentInvitationDeleteComponent implements OnInit {
   constructor(private router: Router, private route: ActivatedRoute, private tournamentService: TournamentServiceService , private tournamentinvitationService: TournamentInvitationService) { }
 
   ngOnInit() {
+
     const id = this.route.snapshot.paramMap.get('id');
     this.tournamentinvitationService.get(id).subscribe(
       tournamentInvitation => this.tournamentInvitation = tournamentInvitation
-    ); }
+    );
+
+   }
 
     delete() {
       this.tournamentinvitationService.delete(this.tournamentInvitation).subscribe(
