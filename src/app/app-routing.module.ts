@@ -13,6 +13,7 @@ import { PlayerRegisterComponent } from './player/player-register/player-registe
 import {TournamentListComponent} from './tournament/tournament-list/tournament-list.component';
 import {TournamentCreateComponent} from './tournament/tournament-create/tournament-create.component';
 import {TournamentEditComponent} from './tournament/tournament-edit/tournament-edit.component';
+import {TournamentDeleteComponent} from './tournament/tournament-delete/tournament-delete.component';
 import {TournamentDetailComponent} from './tournament/tournament-detail/tournament-detail.component';
 
 const routes: Routes = [
@@ -28,6 +29,7 @@ const routes: Routes = [
   {path: 'tournaments',component: TournamentListComponent},
   {path: 'tournaments/new',component: TournamentCreateComponent},
   {path: 'tournaments/:id/edit',component: TournamentEditComponent},
+  {path: 'tournaments/:id/delete', component: TournamentDeleteComponent},
   {path: 'tournaments/:id',component: TournamentDetailComponent},
 ];
 

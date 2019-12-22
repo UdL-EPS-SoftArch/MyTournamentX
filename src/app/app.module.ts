@@ -43,7 +43,7 @@ import { TournamentEditComponent } from './tournament/tournament-edit/tournament
 import { TournamentCreateComponent } from './tournament/tournament-create/tournament-create.component';
 import { TournamentListComponent } from './tournament/tournament-list/tournament-list.component';
 import { TournamentDetailComponent } from './tournament/tournament-detail/tournament-detail.component';
-//import { TournamentDeleteComponent } from './tournament/tournament-delete/tournament-list.component';
+import { TournamentDeleteComponent } from './tournament/tournament-delete/tournament-delete.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +61,7 @@ import { TournamentDetailComponent } from './tournament/tournament-detail/tourna
     TournamentDetailComponent,
     TournamentEditComponent,
     TournamentCreateComponent,
-    //TournamentDeleteComponent,
+    TournamentDeleteComponent,
   ],
   imports: [
     BrowserModule,
