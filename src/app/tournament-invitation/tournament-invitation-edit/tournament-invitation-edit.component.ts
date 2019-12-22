@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TournamentInvitation } from 'src/app/shared/models/tournamentinvitation';
-import { TournamentInvitationServiceService } from 'src/app/shared/services/tournament-invitation-service.service';
+import { TournamentInvitationService } from 'src/app/tournament-invitation/tournament-invitation.service';
 import { Location } from '@angular/common';
 
 @Component({
@@ -12,7 +12,7 @@ import { Location } from '@angular/common';
 export class TournamentInvitationEditComponent implements OnInit {
   public tournamentInvitation = new TournamentInvitation();
   // tslint:disable-next-line: max-line-length
-  constructor(private router: Router, private route: ActivatedRoute, private tournamentInvitationService: TournamentInvitationServiceService, private location: Location) { }
+  constructor(private router: Router, private route: ActivatedRoute, private tournamentInvitationService: TournamentInvitationService, private location: Location) { }
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
