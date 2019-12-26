@@ -11,10 +11,11 @@ import { Tournament } from '../tournament';
 export class TournamentDeleteComponent implements OnInit {
 
   public tournament: Tournament = new Tournament();
-  constructor(private router: Router, private route: ActivatedRoute, private tournamentService: TournamentServiceService ) { }
+  constructor(private router: Router,
+              private route: ActivatedRoute,
+              private tournamentService: TournamentServiceService ) { }
 
   ngOnInit() {
-
     const id = this.route.snapshot.paramMap.get('id');
     this.tournamentService.get(id).subscribe(tournament => this.tournament = tournament);
   }

@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Tournament } from '../tournament';
 import { Router, ActivatedRoute } from '@angular/router';
 import { TournamentServiceService } from '../tournament.service';
-import { flatMap } from 'rxjs/operators';
-import { Player } from 'src/app/shared/models/player';
 
 @Component({
   selector: 'app-tournament-detail',
@@ -13,20 +11,14 @@ import { Player } from 'src/app/shared/models/player';
 export class TournamentDetailComponent implements OnInit {
 
   public tournament: Tournament = new Tournament();
-  // public leader: Player= new Player();
 
-  constructor( private router: Router, private route: ActivatedRoute, private tournamentService: TournamentServiceService) { }
+  constructor( private router: Router,
+               private route: ActivatedRoute,
+               private tournamentService: TournamentServiceService) { }
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
-    this.tournamentService.get(id).pipe(
-      flatMap(tournament => {
-        this.tournament = tournament;
-        return tournament.getRelation(Player, 'tournamentMaster');
-       }),
-       // flatMap(leader => this.tournament)
-    ).subscribe( );
+    this.tournamentService.get(id).subscribe(
+      tournament => this.tournament = tournament );
   }
-
-
 }

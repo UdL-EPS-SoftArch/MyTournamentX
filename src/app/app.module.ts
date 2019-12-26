@@ -36,9 +36,8 @@ import { PlayerEditComponent } from './player/player-edit/player-edit.component'
 import { PlayerSearchComponent } from './player/player-search/player-search.component';
 import { MatDialogModule } from '@angular/material/dialog';
 
-
-//Angular material imports to tournament
-import {MatTableModule} from '@angular/material/table'
+// Angular material imports to tournament
+import {MatTableModule} from '@angular/material/table';
 import { TournamentEditComponent } from './tournament/tournament-edit/tournament-edit.component';
 import { TournamentCreateComponent } from './tournament/tournament-create/tournament-create.component';
 import { TournamentListComponent } from './tournament/tournament-list/tournament-list.component';
@@ -86,7 +85,7 @@ import { TournamentDeleteComponent } from './tournament/tournament-delete/tourna
     MatPaginatorModule,
     MatDialogModule,
 
-    //Agular TableModule
+    // Agular TableModule
     MatTableModule,
 
   ],

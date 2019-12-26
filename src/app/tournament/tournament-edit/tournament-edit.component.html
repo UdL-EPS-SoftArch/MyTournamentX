@@ -5,13 +5,13 @@
 
     <!-- TournamentName input -->
     <div class="form-group">
-        <label class="control-label" for="tournamentname"><strong>Tournament name:</strong></label>
+        <label class="control-label" for="name"><strong>Tournament name:</strong></label>
         <input id="name" name="name" type="text" class="form-control" required
                [(ngModel)]="tournament.id" #name="ngModel">
         <div class="invalid-feedback">A Tournament Name is required</div>
     </div>
-  
-    <!-- Level input 
+
+    <!-- Level input
     <div class="form-group">
         <label class="control-label" for="level"><strong>Level:</strong></label>
         <mat-form-field>
@@ -23,7 +23,7 @@
         </mat-form-field>
         <div class="invalid-feedback">A Level is required</div>
     </div>-->
-      
+
     <!-- Game input -->
     <div class="form-group" >
         <label class="control-label" for="game"><strong>Game:</strong></label>
@@ -33,10 +33,10 @@
     </div>
 
     <!-- bestOf input -->
-    <div class="form-group" [class.was-validated]="state.dirty || state.touched">
+    <div class="form-group" [class.was-validated]="bestOf.dirty || bestOf.touched">
         <label class="control-label" for="state"><strong>bestOf:</strong></label>
         <input id="bestOf" name="bestOf" type="text" class="form-control" required
-                [(ngModel)]="tournament.bestOf" #type="ngModel">
+                [(ngModel)]="tournament.bestOf" #bestOf="ngModel">
         <div class="invalid-feedback">A bestOf is required</div>
     </div>
 
@@ -92,7 +92,7 @@
     <div class="form-group" [class.was-validated]="state.dirty || state.touched">
         <label class="control-label" for="state"><strong>State:</strong></label>
         <input id="state" name="state" type="text" class="form-control" required
-               [(ngModel)]="tournament.state" #type="ngModel">
+               [(ngModel)]="tournament.state" #state="ngModel">
         <div class="invalid-feedback">A State is required</div>
     </div>
 

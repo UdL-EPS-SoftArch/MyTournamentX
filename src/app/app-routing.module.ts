@@ -9,7 +9,7 @@ import { PlayerDeleteComponent } from './player/player-delete/player-delete.comp
 import { PlayerEditComponent } from './player/player-edit/player-edit.component';
 import { PlayerRegisterComponent } from './player/player-register/player-register.component';
 
-//Tournaments
+// Tournaments
 import {TournamentListComponent} from './tournament/tournament-list/tournament-list.component';
 import {TournamentCreateComponent} from './tournament/tournament-create/tournament-create.component';
 import {TournamentEditComponent} from './tournament/tournament-edit/tournament-edit.component';
@@ -25,12 +25,12 @@ const routes: Routes = [
   {path: 'about', component: AboutComponent},
   {path: '', redirectTo: 'about', pathMatch: 'full'},
 
-  //Tournaments
-  {path: 'tournaments',component: TournamentListComponent},
-  {path: 'tournaments/new',component: TournamentCreateComponent},
-  {path: 'tournaments/:id/edit',component: TournamentEditComponent},
+  // Tournaments
+  {path: 'tournaments', component: TournamentListComponent},
+  {path: 'tournaments/new', component: TournamentCreateComponent},
+  {path: 'tournaments/:id/edit', component: TournamentEditComponent},
   {path: 'tournaments/:id/delete', component: TournamentDeleteComponent},
-  {path: 'tournaments/:id',component: TournamentDetailComponent},
+  {path: 'tournaments/:id', component: TournamentDetailComponent},
 ];
 
 

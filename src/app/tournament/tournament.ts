@@ -1,5 +1,6 @@
 import {Resource} from '@lagoshny/ngx-hal-client';
 import {Team} from '../shared/models/team';
+import {Player} from '../shared/models/player';
 
 export class Tournament extends Resource {
   id: string;
@@ -14,13 +15,14 @@ export class Tournament extends Resource {
   maxTeamPlayers: number;
   state: string;
   participants: Team[];
+  tournamentMaster: Player;
   bestOf: number;
   finishedAt: Date;
   startAt: Date;
   createdAt: Date;
   limitDate: Date;
 
-  //URI
+  // URI
   uri: string;
 
   constructor() {

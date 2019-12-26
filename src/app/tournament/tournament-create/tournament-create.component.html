@@ -3,8 +3,8 @@
   <fieldset>
 
     <!-- TournamentName input -->
-    <div class="form-group" [class.was-validated]="id.dirty || id.touched">
-      <label class="control-label" for="tournamentname"><strong>Tournament name:</strong></label>
+    <div class="form-group" [class.was-validated]="name.dirty || name.touched">
+      <label class="control-label" for="name"><strong>Tournament name:</strong></label>
       <input id="name" name="name" type="text" class="form-control" required
              [(ngModel)]="tournament.name" #name="ngModel">
       <div class="invalid-feedback">A Tournament Name is required</div>
@@ -14,7 +14,7 @@
     <div class="form-group" [class.was-validated]="level.dirty || level.touched">
         <label class="control-label" for="level"><strong>Level:</strong></label>
         <input id="level" name="level" type="level" class="form-control" required
-               [(ngModel)]="tournament.level" #game="ngModel">
+               [(ngModel)]="tournament.level" #level="ngModel">
         <div class="invalid-feedback">A Level is required</div>
     </div>
 
@@ -25,7 +25,7 @@
                [(ngModel)]="tournament.game" #game="ngModel">
         <div class="invalid-feedback">A Game is required</div>
     </div>
-    
+
     <!-- bestOf input -->
     <div class="form-group" [class.was-validated]="state.dirty || state.touched">
         <label class="control-label" for="state"><strong>bestOf:</strong></label>
@@ -33,7 +33,7 @@
                 [(ngModel)]="tournament.bestOf" #type="ngModel">
         <div class="invalid-feedback">A bestOf is required</div>
     </div>
-    
+
     <!-- Type input -->
     <div class="form-group" [class.was-validated]="type.dirty || type.touched">
         <label class="control-label" for="type"><strong>Type:</strong></label>
@@ -86,7 +86,7 @@
     <div class="form-group" [class.was-validated]="state.dirty || state.touched">
         <label class="control-label" for="state"><strong>State:</strong></label>
         <input id="state" name="state" type="text" class="form-control" required
-               [(ngModel)]="tournament.state" #type="ngModel">
+               [(ngModel)]="tournament.state" #state="ngModel">
         <div class="invalid-feedback">A State is required</div>
     </div>
 
