@@ -8,7 +8,14 @@ import { PlayerDetailComponent } from './player/player-detail/player-detail.comp
 import { PlayerDeleteComponent } from './player/player-delete/player-delete.component';
 import { PlayerEditComponent } from './player/player-edit/player-edit.component';
 import { PlayerRegisterComponent } from './player/player-register/player-register.component';
-
+import { RoundListComponent } from './round/round-list/round-list.component';
+import { RoundDetailComponent } from './round/round-detail/round-detail.component';
+// Teams
+import { TeamListComponent} from './team/team-list/team-list.component';
+import { TeamDetailComponent } from './team/team-detail/team-detail.component';
+import { TeamCreateComponent } from './team/team-create/team-create.component';
+import { TeamEditComponent } from './team/team-edit/team-edit.component';
+import { TeamDeleteComponent } from './team/team-delete/team-delete.component';
 // Tournaments
 import {TournamentListComponent} from './tournament/tournament-list/tournament-list.component';
 import {TournamentCreateComponent} from './tournament/tournament-create/tournament-create.component';
@@ -17,6 +24,8 @@ import {TournamentDeleteComponent} from './tournament/tournament-delete/tourname
 import {TournamentDetailComponent} from './tournament/tournament-detail/tournament-detail.component';
 
 const routes: Routes = [
+  {path: 'tournaments/:id/rounds/', component: RoundListComponent},
+  {path: 'rounds/:id', component: RoundDetailComponent},
   {path: 'players/register', component: PlayerRegisterComponent},
   {path: 'players/:id/edit', component: PlayerEditComponent, canActivate: [PlayerGuard]},
   {path: 'players/:id/delete', component: PlayerDeleteComponent, canActivate: [PlayerGuard]},
@@ -24,7 +33,12 @@ const routes: Routes = [
   {path: 'players', component: PlayerListComponent, canActivate: [LoggedInGuard]},
   {path: 'about', component: AboutComponent},
   {path: '', redirectTo: 'about', pathMatch: 'full'},
-
+  // Team
+  {path: 'teams', component: TeamListComponent},
+  {path: 'teams/new', component: TeamCreateComponent},
+  {path: 'teams/:id/edit', component: TeamEditComponent},
+  {path: 'teams/:id/delete', component: TeamDeleteComponent},
+  {path: 'teams/:id', component: TeamDetailComponent},
   // Tournaments
   {path: 'tournaments', component: TournamentListComponent},
   {path: 'tournaments/new', component: TournamentCreateComponent},
@@ -32,7 +46,6 @@ const routes: Routes = [
   {path: 'tournaments/:id/delete', component: TournamentDeleteComponent},
   {path: 'tournaments/:id', component: TournamentDetailComponent},
 ];
-
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

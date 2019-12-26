@@ -1,0 +1,7 @@
+<h1>Round {{id}}</h1>
+<div class="info">
+    <div *ngIf="" class="round-winner">Player X</div>
+</div>
+<div *ngIf="round" class="matches">
+    <app-match-list [round]="round"></app-match-list>
+</div>

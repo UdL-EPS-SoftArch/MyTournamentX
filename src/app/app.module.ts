@@ -15,6 +15,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
+import { MatDividerModule } from '@angular/material/divider';
 
 import { ErrorHandlerModule } from './error-handler/error-handler.module';
 import { HttpErrorInterceptor } from './error-handler/http-error-interceptor';
@@ -35,9 +36,16 @@ import { PlayerRegisterComponent } from './player/player-register/player-registe
 import { PlayerEditComponent } from './player/player-edit/player-edit.component';
 import { PlayerSearchComponent } from './player/player-search/player-search.component';
 import { MatDialogModule } from '@angular/material/dialog';
-
-// Angular material imports to tournament
-import {MatTableModule} from '@angular/material/table';
+import { TeamListComponent } from './team/team-list/team-list.component';
+import { TeamDetailComponent } from './team/team-detail/team-detail.component';
+import { MatTableModule } from '@angular/material/table';
+import { TeamEditComponent } from './team/team-edit/team-edit.component';
+import { TeamCreateComponent } from './team/team-create/team-create.component';
+import { TeamDeleteComponent } from './team/team-delete/team-delete.component';
+import { MatSelectModule } from '@angular/material/select';
+import { MatchListComponent } from './match/match-list/match-list.component';
+import { RoundDetailComponent } from './round/round-detail/round-detail.component';
+import { RoundListComponent } from './round/round-list/round-list.component';
 import { TournamentEditComponent } from './tournament/tournament-edit/tournament-edit.component';
 import { TournamentCreateComponent } from './tournament/tournament-create/tournament-create.component';
 import { TournamentListComponent } from './tournament/tournament-list/tournament-list.component';
@@ -55,7 +63,14 @@ import { TournamentDeleteComponent } from './tournament/tournament-delete/tourna
     PlayerRegisterComponent,
     PlayerEditComponent,
     PlayerSearchComponent,
-
+    TeamListComponent,
+    TeamDetailComponent,
+    TeamEditComponent,
+    TeamCreateComponent,
+    TeamDeleteComponent,
+    MatchListComponent,
+    RoundDetailComponent,
+    RoundListComponent,
     TournamentListComponent,
     TournamentDetailComponent,
     TournamentEditComponent,
@@ -84,10 +99,11 @@ import { TournamentDeleteComponent } from './tournament/tournament-delete/tourna
     MatCardModule,
     MatPaginatorModule,
     MatDialogModule,
-
-    // Agular TableModule
     MatTableModule,
-
+    MatSelectModule,
+    MatDividerModule,
+    MatDialogModule,
+    MatTableModule,
   ],
   providers: [
     { provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: { duration: 5000 } },
