@@ -20,7 +20,6 @@
           <mat-menu #playersMenu="matMenu">
             <button mat-menu-item [routerLink]="'/players'">List Players</button>
           </mat-menu>
-
           <!-- Team -->
           <button style="margin-left: 15px;"mat-icon-button [matMenuTriggerFor]="teamsMenu">Teams</button>
           <mat-menu #teamsMenu="matMenu">
@@ -28,7 +27,13 @@
             <!--<button mat-menu-item [routerLink]="'/teams/:id'">My Teams</button>-->
             <button mat-menu-item [routerLink]="'/teams/new'">Create Team</button>
           </mat-menu>
-
+          <!-- Tournament -->
+          <button style="margin-left: 15px;"mat-icon-button [matMenuTriggerFor]="tournamentsMenu">Tournament</button>
+          <mat-menu #tournamentsMenu="matMenu">
+            <button mat-menu-item [routerLink]="'/tournaments'">List Tournaments</button>
+            <!--<button mat-menu-item [routerLink]="'/tournaments/:id'">My Tournament</button>-->
+            <button mat-menu-item [routerLink]="'/tournaments/new'">Create Tournament</button>
+          </mat-menu>
         </div>
         <span class="menu-spacer"></span>
         <div app-login-navbar></div>
