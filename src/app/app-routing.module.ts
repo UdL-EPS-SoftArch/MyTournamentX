@@ -24,6 +24,11 @@ import {TournamentDeleteComponent} from './tournament/tournament-delete/tourname
 import {TournamentDetailComponent} from './tournament/tournament-detail/tournament-detail.component';
 // tslint:disable-next-line: max-line-length
 import { TournamentInvitationCreateComponent } from './tournament-invitation/tournament-invitation-create/tournament-invitation-create.component';
+// tslint:disable-next-line: max-line-length
+import { TournamentInvitationDeleteComponent } from './tournament-invitation/tournament-invitation-delete/tournament-invitation-delete.component';
+// tslint:disable-next-line: max-line-length
+import { TournamentInvitationDetailComponent } from './tournament-invitation/tournament-invitation-detail/tournament-invitation-detail.component';
+import { TournamentInvitationEditComponent } from './tournament-invitation/tournament-invitation-edit/tournament-invitation-edit.component';
 
 
 const routes: Routes = [
@@ -49,7 +54,11 @@ const routes: Routes = [
   {path: 'tournaments/:id/delete', component: TournamentDeleteComponent},
   {path: 'tournaments/:id', component: TournamentDetailComponent},
   // TournamentInvitation
-  {path: 'tournaments/:id/invitate', component: TournamentInvitationCreateComponent}
+  {path: 'tournaments/:id/invite', component: TournamentInvitationCreateComponent},
+  {path: 'tournamentInvitations/:id/delete', component: TournamentInvitationDeleteComponent},
+  {path: 'tournamentInvitations/:id', component: TournamentInvitationDetailComponent},
+  {path: 'tournamentInvitations/:id/edit', component: TournamentInvitationEditComponent}
+
 ];
 
 @NgModule({
