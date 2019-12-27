@@ -22,6 +22,9 @@ import {TournamentCreateComponent} from './tournament/tournament-create/tourname
 import {TournamentEditComponent} from './tournament/tournament-edit/tournament-edit.component';
 import {TournamentDeleteComponent} from './tournament/tournament-delete/tournament-delete.component';
 import {TournamentDetailComponent} from './tournament/tournament-detail/tournament-detail.component';
+// tslint:disable-next-line: max-line-length
+import { TournamentInvitationCreateComponent } from './tournament-invitation/tournament-invitation-create/tournament-invitation-create.component';
+
 
 const routes: Routes = [
   {path: 'tournaments/:id/rounds/', component: RoundListComponent},
@@ -45,6 +48,8 @@ const routes: Routes = [
   {path: 'tournaments/:id/edit', component: TournamentEditComponent},
   {path: 'tournaments/:id/delete', component: TournamentDeleteComponent},
   {path: 'tournaments/:id', component: TournamentDetailComponent},
+  // TournamentInvitation
+  {path: 'tournaments/:id/invitate', component: TournamentInvitationCreateComponent}
 ];
 
 @NgModule({
