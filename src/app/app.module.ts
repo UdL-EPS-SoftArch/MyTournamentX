@@ -46,6 +46,11 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatchListComponent } from './match/match-list/match-list.component';
 import { RoundDetailComponent } from './round/round-detail/round-detail.component';
 import { RoundListComponent } from './round/round-list/round-list.component';
+import { TournamentEditComponent } from './tournament/tournament-edit/tournament-edit.component';
+import { TournamentCreateComponent } from './tournament/tournament-create/tournament-create.component';
+import { TournamentListComponent } from './tournament/tournament-list/tournament-list.component';
+import { TournamentDetailComponent } from './tournament/tournament-detail/tournament-detail.component';
+import { TournamentDeleteComponent } from './tournament/tournament-delete/tournament-delete.component';
 // tslint:disable-next-line: max-line-length
 import { TournamentInvitationCreateComponent } from './tournament-invitation/tournament-invitation-create/tournament-invitation-create.component';
 
@@ -67,6 +72,12 @@ import { TournamentInvitationCreateComponent } from './tournament-invitation/tou
     TeamDeleteComponent,
     MatchListComponent,
     RoundDetailComponent,
+    RoundListComponent,
+    TournamentListComponent,
+    TournamentDetailComponent,
+    TournamentEditComponent,
+    TournamentCreateComponent,
+    TournamentDeleteComponent,
     RoundListComponent,
     TournamentInvitationCreateComponent
   ],
@@ -94,7 +105,9 @@ import { TournamentInvitationCreateComponent } from './tournament-invitation/tou
     MatDialogModule,
     MatTableModule,
     MatSelectModule,
-    MatDividerModule
+    MatDividerModule,
+    MatDialogModule,
+    MatTableModule,
   ],
   providers: [
     { provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: { duration: 5000 } },

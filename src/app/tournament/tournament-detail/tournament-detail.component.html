@@ -1,0 +1,43 @@
+<div class="container-fluid" style="padding-top: 2%;">
+
+        <table class="table table-hover">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Tournament Name</th>
+              <th scope="col">Status</th>
+              <th scope="col">Level</th>
+              <th scope="col">Game</th>
+              <th scope="col">bestOf</th>
+              <th scope="col">Type</th>
+              <th scope="col">Description</th>
+              <th scope="col">Minimum Participants</th>
+              <th scope="col">Maximum Participants</th>
+              <th scope="col">Minimum Team Players</th>
+              <th scope="col">Maximum Team Players</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td scope="row">{{tournament.id}}</td>
+              <td>{{tournament.state}}</td>
+              <td>{{tournament.level}}</td>
+              <td>{{tournament.game}}</td>
+              <td>{{tournament.bestOf}}</td>
+              <td>{{tournament.type}}</td>
+              <td>{{tournament.description}}</td>
+              <td>{{tournament.minParticipants}}</td>
+              <td>{{tournament.maxParticipants}}</td>
+              <td>{{tournament.minTeamPlayers}}</td>
+              <td>{{tournament.maxTeamPlayers}}</td>
+              <td><button id="editBtn" type="button" [routerLink]="['edit']"
+                class="btn m-1 btn-outline-success">Edit
+              </button></td>
+              <td> <button id="deleteBtn" type="button" [routerLink]="['delete']"
+                class="btn m-1 btn-outline-danger">Delete</button></td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
