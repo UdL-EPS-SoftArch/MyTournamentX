@@ -1,3 +1,4 @@
+<div class="container-fluid" style="padding-top: 2%;">
 <h2>Create a new Tournament</h2>
 <form id="tournament-create" (ngSubmit)="onSubmit()" #form="ngForm">
   <fieldset>
@@ -11,10 +12,15 @@
     </div>
 
     <!-- Level input -->
-    <div class="form-group" [class.was-validated]="level.dirty || level.touched">
+    <div class="form-group">
         <label class="control-label" for="level"><strong>Level:</strong></label>
-        <input id="level" name="level" type="level" class="form-control" required
-               [(ngModel)]="tournament.level" #level="ngModel">
+        <mat-form-field>
+            <mat-select [(value)]="tournament.level" style="margin-left: 25%">
+              <mat-option value="AMATEUR">Amateur</mat-option>
+              <mat-option value="PROFESSIONAL">Professional</mat-option>
+              <mat-option value="BEGGINER">Beginner</mat-option>
+            </mat-select>
+          </mat-form-field>
         <div class="invalid-feedback">A Level is required</div>
     </div>
 
@@ -28,7 +34,7 @@
 
     <!-- bestOf input -->
     <div class="form-group" [class.was-validated]="state.dirty || state.touched">
-        <label class="control-label" for="state"><strong>bestOf:</strong></label>
+        <label class="control-label" for="bestOf"><strong>bestOf:</strong></label>
         <input id="bestOf" name="bestOf" type="text" class="form-control" required
                 [(ngModel)]="tournament.bestOf" #type="ngModel">
         <div class="invalid-feedback">A bestOf is required</div>
@@ -98,3 +104,4 @@
 
   </fieldset>
 </form>
+</div>
