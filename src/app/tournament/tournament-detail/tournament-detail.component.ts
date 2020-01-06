@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { ActivatedRoute, Router } from '@angular/router';
 
 import { TournamentServiceService } from '../../shared/services/tournament-service.service';
@@ -26,3 +27,4 @@ export class TournamentDetailComponent implements OnInit {
             });
         };
     };
+

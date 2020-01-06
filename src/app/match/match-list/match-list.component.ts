@@ -13,7 +13,7 @@ import { Round } from 'src/app/shared/models/round';
 })
 export class MatchListComponent implements OnInit {
 
-    private matches: Match[];
+    matches: Match[];
     @Input() round: Round;
 
     constructor(private route: ActivatedRoute,
