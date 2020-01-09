@@ -15,6 +15,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
+import { MatDividerModule } from '@angular/material/divider';
 
 import { ErrorHandlerModule } from './error-handler/error-handler.module';
 import { HttpErrorInterceptor } from './error-handler/http-error-interceptor';
@@ -37,6 +38,28 @@ import { PlayerSearchComponent } from './player/player-search/player-search.comp
 import { MatDialogModule } from '@angular/material/dialog';
 import {TeamInvitationDetailComponent} from './teamInvitation/teamInvitation-detail/teamInvitation-detail.component';
 import {TeamInvitationCreateComponent} from './teamInvitation/teamInvitation-create/teamInvitation-create.component';
+import { TeamListComponent } from './team/team-list/team-list.component';
+import { TeamDetailComponent } from './team/team-detail/team-detail.component';
+import { MatTableModule } from '@angular/material/table';
+import { TeamEditComponent } from './team/team-edit/team-edit.component';
+import { TeamCreateComponent } from './team/team-create/team-create.component';
+import { TeamDeleteComponent } from './team/team-delete/team-delete.component';
+import { MatSelectModule } from '@angular/material/select';
+import { MatchListComponent } from './match/match-list/match-list.component';
+import { RoundDetailComponent } from './round/round-detail/round-detail.component';
+import { RoundListComponent } from './round/round-list/round-list.component';
+import { TournamentEditComponent } from './tournament/tournament-edit/tournament-edit.component';
+import { TournamentCreateComponent } from './tournament/tournament-create/tournament-create.component';
+import { TournamentListComponent } from './tournament/tournament-list/tournament-list.component';
+import { TournamentDetailComponent } from './tournament/tournament-detail/tournament-detail.component';
+import { TournamentDeleteComponent } from './tournament/tournament-delete/tournament-delete.component';
+// tslint:disable-next-line: max-line-length
+import { TournamentInvitationCreateComponent } from './tournament-invitation/tournament-invitation-create/tournament-invitation-create.component';
+// tslint:disable-next-line: max-line-length
+import { TournamentInvitationDeleteComponent } from './tournament-invitation/tournament-invitation-delete/tournament-invitation-delete.component';
+// tslint:disable-next-line: max-line-length
+import { TournamentInvitationDetailComponent } from './tournament-invitation/tournament-invitation-detail/tournament-invitation-detail.component';
+import { TournamentInvitationEditComponent } from './tournament-invitation/tournament-invitation-edit/tournament-invitation-edit.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +74,24 @@ import {TeamInvitationCreateComponent} from './teamInvitation/teamInvitation-cre
     PlayerSearchComponent,
     TeamInvitationDetailComponent,
     TeamInvitationCreateComponent
+    TeamListComponent,
+    TeamDetailComponent,
+    TeamEditComponent,
+    TeamCreateComponent,
+    TeamDeleteComponent,
+    MatchListComponent,
+    RoundDetailComponent,
+    RoundListComponent,
+    TournamentListComponent,
+    TournamentDetailComponent,
+    TournamentEditComponent,
+    TournamentCreateComponent,
+    TournamentDeleteComponent,
+    RoundListComponent,
+    TournamentInvitationCreateComponent,
+    TournamentInvitationDeleteComponent,
+    TournamentInvitationDetailComponent,
+    TournamentInvitationEditComponent
   ],
   imports: [
     BrowserModule,
@@ -73,7 +114,12 @@ import {TeamInvitationCreateComponent} from './teamInvitation/teamInvitation-cre
     MatSidenavModule,
     MatCardModule,
     MatPaginatorModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTableModule,
+    MatSelectModule,
+    MatDividerModule,
+    MatDialogModule,
+    MatTableModule,
   ],
   providers: [
     { provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: { duration: 5000 } },

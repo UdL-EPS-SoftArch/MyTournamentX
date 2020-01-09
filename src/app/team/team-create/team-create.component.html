@@ -1,0 +1,53 @@
+
+<h2>Create a new Team</h2>
+<form id="team-create" (ngSubmit)="onSubmit()" #form="ngForm">
+  <fieldset>
+
+    <!-- TeamName input -->
+    <div class="form-group" >
+      <label class="control-label" for="teamname"><strong>Team name:</strong></label>
+      <input id="name" name="name" type="text" class="form-control" required
+             [(ngModel)]="team.name" #name="ngModel">
+      <div class="invalid-feedback">A Team Name is required</div>
+    </div>
+
+    <!-- Game input -->
+    <div class="form-group" >
+        <label class="control-label" for="game"><strong>Game:</strong></label>
+        <input id="game" name="game" type="text" class="form-control" required
+               [(ngModel)]="team.game" #game="ngModel">
+        <div class="invalid-feedback">A Game is required</div>
+      </div>
+
+    <!-- Level input -->
+    <div class="form-group" >
+        <label class="control-label" for="level"><strong>Level:</strong></label>
+        <mat-form-field>
+          <mat-select [(value)]="team.level">
+            <mat-option value="Amateur">Amateur</mat-option>
+            <mat-option value="Professional">Professional</mat-option>
+            <mat-option value="Beginner">Beginner</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div class="invalid-feedback">A Level is required</div>
+      </div>
+
+      
+      
+    <!-- maxPlayers input -->
+    <div class="form-group" >
+        <label class="control-label" for="maxPlayers"><strong>Number of maximum players:</strong></label>
+        <input id="maxPlayers" name="maxPlayers" type="text" class="form-control" required
+               [(ngModel)]="team.maxPlayers" #maxPlayers="ngModel">
+        <div class="invalid-feedback">Number of maximum players is required</div>
+      </div>
+
+    <!-- Button -->
+    <div class="form-group">
+      <button id="submit" type="submit" class="btn m-1 btn-success pull-right" [disabled]="!form.form.valid">Create</button>
+      <button id="listBtn" type="button" [routerLink]="['']" class="btn m-1 btn-outline-primary pull-right">Back</button>
+    </div>
+
+  </fieldset>
+</form>
+

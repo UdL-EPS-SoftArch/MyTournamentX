@@ -1,0 +1,100 @@
+<h2>Create a new Tournament</h2>
+<form id="tournament-create" (ngSubmit)="onSubmit()" #form="ngForm">
+  <fieldset>
+
+    <!-- TournamentName input -->
+    <div class="form-group" [class.was-validated]="name.dirty || name.touched">
+      <label class="control-label" for="name"><strong>Tournament name:</strong></label>
+      <input id="name" name="name" type="text" class="form-control" required
+             [(ngModel)]="tournament.name" #name="ngModel">
+      <div class="invalid-feedback">A Tournament Name is required</div>
+    </div>
+
+    <!-- Level input -->
+    <div class="form-group" [class.was-validated]="level.dirty || level.touched">
+        <label class="control-label" for="level"><strong>Level:</strong></label>
+        <input id="level" name="level" type="level" class="form-control" required
+               [(ngModel)]="tournament.level" #level="ngModel">
+        <div class="invalid-feedback">A Level is required</div>
+    </div>
+
+    <!-- Game input -->
+    <div class="form-group" [class.was-validated]="game.dirty || game.touched">
+        <label class="control-label" for="game"><strong>Game:</strong></label>
+        <input id="game" name="game" type="text" class="form-control" required
+               [(ngModel)]="tournament.game" #game="ngModel">
+        <div class="invalid-feedback">A Game is required</div>
+    </div>
+
+    <!-- bestOf input -->
+    <div class="form-group" [class.was-validated]="state.dirty || state.touched">
+        <label class="control-label" for="state"><strong>bestOf:</strong></label>
+        <input id="bestOf" name="bestOf" type="text" class="form-control" required
+                [(ngModel)]="tournament.bestOf" #type="ngModel">
+        <div class="invalid-feedback">A bestOf is required</div>
+    </div>
+
+    <!-- Type input -->
+    <div class="form-group" [class.was-validated]="type.dirty || type.touched">
+        <label class="control-label" for="type"><strong>Type:</strong></label>
+        <input id="type" name="type" type="text" class="form-control" required
+               [(ngModel)]="tournament.type" #type="ngModel">
+        <div class="invalid-feedback">A Type is required</div>
+    </div>
+
+    <!-- Description input -->
+    <div class="form-group" [class.was-validated]="description.dirty || description.touched">
+        <label class="control-label" for="description"><strong>Description:</strong></label>
+        <input id="description" name="description" type="text" class="form-control" required
+                [(ngModel)]="tournament.description" #description="ngModel">
+        <div class="invalid-feedback">A Description is required</div>
+    </div>
+
+    <!-- minParticipants input -->
+    <div class="form-group" [class.was-validated]="minParticipants.dirty || minParticipants.touched">
+        <label class="control-label" for="minParticipants"><strong>Number minimum of participants:</strong></label>
+        <input id="minParticipants" name="minParticipants" type="text" class="form-control" required
+               [(ngModel)]="tournament.minParticipants" #minParticipants="ngModel">
+        <div class="invalid-feedback">Number minimum of participants is required</div>
+    </div>
+
+    <!-- maxParticipants input -->
+    <div class="form-group" [class.was-validated]="maxParticipants.dirty || maxParticipants.touched">
+        <label class="control-label" for="maxParticipants"><strong>Number maximum of participants:</strong></label>
+        <input id="maxParticipants" name="maxParticipants" type="text" class="form-control" required
+               [(ngModel)]="tournament.maxParticipants" #maxParticipants="ngModel">
+        <div class="invalid-feedback">Number of maximum players is required</div>
+    </div>
+
+    <!-- minTeamPlayers input -->
+    <div class="form-group" [class.was-validated]="minTeamPlayers.dirty || minTeamPlayers.touched">
+        <label class="control-label" for="minTeamPlayers"><strong>Number minimum of team players:</strong></label>
+        <input id="minTeamPlayers" name="minTeamPlayers" type="text" class="form-control" required
+                [(ngModel)]="tournament.minTeamPlayers" #minTeamPlayers="ngModel">
+        <div class="invalid-feedback">Number minimum of participants is required</div>
+    </div>
+
+    <!-- maxTeamPlayers input -->
+    <div class="form-group" [class.was-validated]="maxTeamPlayers.dirty || maxTeamPlayers.touched">
+        <label class="control-label" for="maxTeamPlayers"><strong>Number maximum of team players:</strong></label>
+        <input id="maxTeamPlayers" name="maxTeamPlayers" type="text" class="form-control" required
+                [(ngModel)]="tournament.maxTeamPlayers" #maxTeamPlayers="ngModel">
+        <div class="invalid-feedback">Number of maximum players is required</div>
+    </div>
+
+    <!-- State input -->
+    <div class="form-group" [class.was-validated]="state.dirty || state.touched">
+        <label class="control-label" for="state"><strong>State:</strong></label>
+        <input id="state" name="state" type="text" class="form-control" required
+               [(ngModel)]="tournament.state" #state="ngModel">
+        <div class="invalid-feedback">A State is required</div>
+    </div>
+
+    <!-- Button -->
+    <div class="form-group">
+      <button id="submit" type="submit" class="btn m-1 btn-success pull-right" [disabled]="!form.form.valid">Create</button> <!--ruta de creació-->
+      <button id="listBtn" type="button" [routerLink]="['']" class="btn m-1 btn-outline-primary pull-right">Back</button>
+    </div>
+
+  </fieldset>
+</form>
