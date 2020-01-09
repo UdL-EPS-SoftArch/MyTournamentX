@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {TeamInvitationServiceService} from '../../shared/services/team-invitation-service.service';
 import {TeamInvitation} from '../../shared/models/teaminvitation';
-import {Player} from "../../shared/models/player";
 
 
 @Component({
