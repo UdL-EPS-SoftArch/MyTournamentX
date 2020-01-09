@@ -73,7 +73,7 @@ import { TournamentInvitationEditComponent } from './tournament-invitation/tourn
     PlayerEditComponent,
     PlayerSearchComponent,
     TeamInvitationDetailComponent,
-    TeamInvitationCreateComponent
+    TeamInvitationCreateComponent,
     TeamListComponent,
     TeamDetailComponent,
     TeamEditComponent,
