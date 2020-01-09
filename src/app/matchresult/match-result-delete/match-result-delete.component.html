@@ -1,0 +1,25 @@
+<h2> Delete your last result updated</h2>
+<form id="match-result-create" (ngSubmit)="onSubmit()" #form="ngForm">
+  <fieldset>
+
+    <!-- Team -->
+    <div>
+      <label><strong>Team:</strong></label>
+      <input required
+        [(ngModel)]="matchresult.team">
+    </div>
+
+    <!-- User -->
+    <div>
+      <label><strong>User:</strong></label>
+      <input required
+             [(ngModel)]="matchresult.user">
+    </div>
+
+    <!-- Button -->
+    <div class="form-group">
+      <button >Delete</button> <!-- Delete button -->
+    </div>
+
+  </fieldset>
+</form>
