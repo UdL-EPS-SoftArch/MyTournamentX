@@ -48,7 +48,7 @@ const routes: Routes = [
   {path: 'teams/:id/edit', component: TeamEditComponent},
   {path: 'teams/:id/delete', component: TeamDeleteComponent},
   {path: 'teams/:id', component: TeamDetailComponent},
-  //matchResult
+  // matchResult
   {path: 'matchresults', component: MatchResultListComponent},
   // Tournaments
   {path: 'tournaments', component: TournamentListComponent},

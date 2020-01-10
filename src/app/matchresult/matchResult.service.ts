@@ -2,7 +2,6 @@ import { Injectable, Injector } from '@angular/core';
 import { RestService } from '@lagoshny/ngx-hal-client';
 import { Observable } from 'rxjs/internal/Observable';
 import { MatchResult } from './matchResult';
-import {Match} from "../shared/models/match";
 
 
 
@@ -12,7 +11,7 @@ import {Match} from "../shared/models/match";
 })
 
 
-export class matchResultService extends RestService<MatchResult> {
+export class MatchResultService extends RestService<MatchResult> {
 
   private teamsUrl = 'http://localhost:8080/matchresults'; // URL to web api
 
@@ -21,7 +20,7 @@ export class matchResultService extends RestService<MatchResult> {
   }
 
   public findByMatch(match: string): Observable<MatchResult[]> {
-    //const options: any = {params: [{key: 'id', value: name}]};
+    // const options: any = {params: [{key: 'id', value: name}]};
     return this.search('findByMatch');
   }
 }

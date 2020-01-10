@@ -1,8 +1,7 @@
 import {Injectable, Injector} from '@angular/core';
 import {RestService} from '@lagoshny/ngx-hal-client';
 import {MatchResult} from '../models/matchresult';
-import {Observable} from "rxjs";
-import {Match} from "../models/match";
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'

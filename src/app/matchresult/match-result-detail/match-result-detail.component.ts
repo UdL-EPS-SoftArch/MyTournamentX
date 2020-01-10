@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {Team} from "../../team/team";
-import {ActivatedRoute, Router} from "@angular/router";
-import {TeamService} from "../../team/team.service";
-import {Player} from "../../shared/models/player";
-import {MatchResult} from "../../shared/models/matchresult";
-import {MatchResultServiceService} from "../../shared/services/match-result-service.service";
-import {Match} from "../../shared/models/match";
+import {Team} from '../../team/team';
+import {ActivatedRoute, Router} from '@angular/router';
+import {MatchResult} from '../../shared/models/matchresult';
+import {MatchResultServiceService} from '../../shared/services/match-result-service.service';
+import {Match} from '../../shared/models/match';
 
 @Component({
   selector: 'app-match-result-detail',

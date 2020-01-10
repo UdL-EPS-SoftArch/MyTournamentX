@@ -1,7 +1,7 @@
 import { Resource } from '@lagoshny/ngx-hal-client';
 import { Player } from 'src/app/shared/models/player';
-import {Match} from "../shared/models/match";
-import {Team} from "../shared/models/team";
+import {Match} from '../shared/models/match';
+import {Team} from '../shared/models/team';
 
 
 

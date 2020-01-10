@@ -1,11 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import {MatchResult} from '../../shared/models/matchresult';
-import {MatchResultServiceService} from "../../shared/services/match-result-service.service";
-import {matchResultService} from "../matchResult.service";
-import {Player} from "../../shared/models/player";
-import {Sort} from "@lagoshny/ngx-hal-client";
-import {PageEvent} from "@angular/material/paginator";
+import {MatchResultServiceService} from '../../shared/services/match-result-service.service';
+import {PageEvent} from '@angular/material/paginator';
 
 @Component({
   selector: 'app-match-result-list',
