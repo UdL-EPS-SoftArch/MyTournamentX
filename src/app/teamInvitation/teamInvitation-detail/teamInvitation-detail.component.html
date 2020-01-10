@@ -8,7 +8,7 @@
     <mat-list>
       <mat-list-item>
         <p matLine>User</p>
-        <p matLine>{{teamInvitation.id}}</p>
+        <p matLine>{{teamInvitation.username.username}}</p>
       </mat-list-item>
       <mat-list-item>
         <p matLine>Team</p>
@@ -16,12 +16,4 @@
       </mat-list-item>
     </mat-list>
   </mat-card-content>
-  <!--
-  <mat-card-actions>
-    <button id="editBtn" *ngIf="getCurrentUser().uri == teamInvitation.uri"
-            mat-raised-button color="accent" [routerLink]="['edit']">Edit</button>
-    <button id="delBtn" *ngIf="getCurrentUser().uri == teamInvitation.uri"
-            mat-raised-button color="warn" [routerLink]="['delete']">Delete</button>
-  </mat-card-actions>
-  -->
 </mat-card>

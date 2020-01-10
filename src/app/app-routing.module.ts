@@ -64,7 +64,7 @@ const routes: Routes = [
   {path: 'tournamentInvitations/:id/edit', component: TournamentInvitationEditComponent},
   // TeamInvitation
   {path: 'teamInvitations/:id', component: TeamInvitationDetailComponent},
-  {path: 'teamInvitations/', component: TeamInvitationListComponent},
+  {path: 'teamInvitations', component: TeamInvitationListComponent},
   {path: 'teamInvitations/:id/invite', component: TeamInvitationCreateComponent}
 ];
 
