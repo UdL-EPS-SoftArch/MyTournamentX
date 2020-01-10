@@ -10,14 +10,26 @@ import { PlayerEditComponent } from './player/player-edit/player-edit.component'
 import { PlayerRegisterComponent } from './player/player-register/player-register.component';
 import { RoundListComponent } from './round/round-list/round-list.component';
 import { RoundDetailComponent } from './round/round-detail/round-detail.component';
-
 // Teams
 import { TeamListComponent} from './team/team-list/team-list.component';
 import { TeamDetailComponent } from './team/team-detail/team-detail.component';
 import { TeamCreateComponent } from './team/team-create/team-create.component';
 import { TeamEditComponent } from './team/team-edit/team-edit.component';
 import { TeamDeleteComponent } from './team/team-delete/team-delete.component';
-import {MatchResultListComponent} from "./matchresult/match-result-list/match-result-list.component";
+// Tournaments
+import {TournamentListComponent} from './tournament/tournament-list/tournament-list.component';
+import {TournamentCreateComponent} from './tournament/tournament-create/tournament-create.component';
+import {TournamentEditComponent} from './tournament/tournament-edit/tournament-edit.component';
+import {TournamentDeleteComponent} from './tournament/tournament-delete/tournament-delete.component';
+import {TournamentDetailComponent} from './tournament/tournament-detail/tournament-detail.component';
+// tslint:disable-next-line: max-line-length
+import { TournamentInvitationCreateComponent } from './tournament-invitation/tournament-invitation-create/tournament-invitation-create.component';
+// tslint:disable-next-line: max-line-length
+import { TournamentInvitationDeleteComponent } from './tournament-invitation/tournament-invitation-delete/tournament-invitation-delete.component';
+// tslint:disable-next-line: max-line-length
+import { TournamentInvitationDetailComponent } from './tournament-invitation/tournament-invitation-detail/tournament-invitation-detail.component';
+import { TournamentInvitationEditComponent } from './tournament-invitation/tournament-invitation-edit/tournament-invitation-edit.component';
+import { MatchResultListComponent } from './matchresult/match-result-list/match-result-list.component';
 
 
 const routes: Routes = [
@@ -38,6 +50,18 @@ const routes: Routes = [
   {path: 'teams/:id', component: TeamDetailComponent},
   //matchResult
   {path: 'matchresults', component: MatchResultListComponent},
+  // Tournaments
+  {path: 'tournaments', component: TournamentListComponent},
+  {path: 'tournaments/new', component: TournamentCreateComponent},
+  {path: 'tournaments/:id/edit', component: TournamentEditComponent},
+  {path: 'tournaments/:id/delete', component: TournamentDeleteComponent},
+  {path: 'tournaments/:id', component: TournamentDetailComponent},
+  // TournamentInvitation
+  {path: 'tournaments/:id/invite', component: TournamentInvitationCreateComponent},
+  {path: 'tournamentInvitations/:id/delete', component: TournamentInvitationDeleteComponent},
+  {path: 'tournamentInvitations/:id', component: TournamentInvitationDetailComponent},
+  {path: 'tournamentInvitations/:id/edit', component: TournamentInvitationEditComponent}
+
 ];
 
 @NgModule({

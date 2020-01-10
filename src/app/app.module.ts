@@ -46,6 +46,18 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatchListComponent } from './match/match-list/match-list.component';
 import { RoundDetailComponent } from './round/round-detail/round-detail.component';
 import { RoundListComponent } from './round/round-list/round-list.component';
+import { TournamentEditComponent } from './tournament/tournament-edit/tournament-edit.component';
+import { TournamentCreateComponent } from './tournament/tournament-create/tournament-create.component';
+import { TournamentListComponent } from './tournament/tournament-list/tournament-list.component';
+import { TournamentDetailComponent } from './tournament/tournament-detail/tournament-detail.component';
+import { TournamentDeleteComponent } from './tournament/tournament-delete/tournament-delete.component';
+// tslint:disable-next-line: max-line-length
+import { TournamentInvitationCreateComponent } from './tournament-invitation/tournament-invitation-create/tournament-invitation-create.component';
+// tslint:disable-next-line: max-line-length
+import { TournamentInvitationDeleteComponent } from './tournament-invitation/tournament-invitation-delete/tournament-invitation-delete.component';
+// tslint:disable-next-line: max-line-length
+import { TournamentInvitationDetailComponent } from './tournament-invitation/tournament-invitation-detail/tournament-invitation-detail.component';
+import { TournamentInvitationEditComponent } from './tournament-invitation/tournament-invitation-edit/tournament-invitation-edit.component';
 import { MatchResultDetailComponent } from './matchresult/match-result-detail/match-result-detail.component';
 import { MatchResultListComponent } from './matchresult/match-result-list/match-result-list.component';
 
@@ -68,6 +80,16 @@ import { MatchResultListComponent } from './matchresult/match-result-list/match-
     MatchListComponent,
     RoundDetailComponent,
     RoundListComponent,
+    TournamentListComponent,
+    TournamentDetailComponent,
+    TournamentEditComponent,
+    TournamentCreateComponent,
+    TournamentDeleteComponent,
+    RoundListComponent,
+    TournamentInvitationCreateComponent,
+    TournamentInvitationDeleteComponent,
+    TournamentInvitationDetailComponent,
+    TournamentInvitationEditComponent
     MatchResultDetailComponent,
     MatchResultListComponent
   ],
@@ -95,7 +117,9 @@ import { MatchResultListComponent } from './matchresult/match-result-list/match-
     MatDialogModule,
     MatTableModule,
     MatSelectModule,
-    MatDividerModule
+    MatDividerModule,
+    MatDialogModule,
+    MatTableModule,
   ],
   providers: [
     { provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: { duration: 5000 } },
