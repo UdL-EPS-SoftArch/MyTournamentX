@@ -65,7 +65,7 @@ const routes: Routes = [
   // TeamInvitation
   {path: 'teamInvitations/:id', component: TeamInvitationDetailComponent},
   {path: 'teamInvitations', component: TeamInvitationListComponent},
-  {path: 'teamInvitations/:id/invite', component: TeamInvitationCreateComponent}
+  {path: 'teamInvitation/new', component: TeamInvitationCreateComponent}
 ];
 
 @NgModule({

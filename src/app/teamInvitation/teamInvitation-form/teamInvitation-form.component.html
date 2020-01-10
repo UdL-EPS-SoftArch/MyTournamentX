@@ -8,12 +8,16 @@
         </mat-form-field>
         <mat-form-field fxLayout="column">
           <input id="team" name="team" matInput placeholder="At what team do you want to invite the player to?"
-                  #team="ngModel" [(ngModel)]="teamInvitation.team" required]>
+                  #team="ngModel" [(ngModel)]="teamInvitation.team" required>
         </mat-form-field>
         <mat-form-field>
           <input id="message" name="message" matInput placeholder="Message"
-                 #message="ngModel" [(ngModel)]="teamInvitation.message" required]>
+                 #message="ngModel" [(ngModel)]="teamInvitation.message">
         </mat-form-field>
       </mat-card-content>
+    <mat-card-actions>
+      <button type="button" mat-raised-button color="accent" [routerLink]="[teamInvitation]">Cancel</button>
+      <button id="submit" type="submit" mat-raised-button color="primary" [disabled]="!form.form.valid">Submit</button>
+    </mat-card-actions>
   </form>
 </mat-card>
