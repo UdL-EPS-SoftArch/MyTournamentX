@@ -32,6 +32,7 @@ import { TournamentInvitationEditComponent } from './tournament-invitation/tourn
 // TeamInvitation
 import {TeamInvitationCreateComponent} from './teamInvitation/teamInvitation-create/teamInvitation-create.component';
 import {TeamInvitationDetailComponent} from './teamInvitation/teamInvitation-detail/teamInvitation-detail.component';
+import {TeamInvitationListComponent} from './teamInvitation/teamInvitation-list/teamInvitation-list.component';
 
 
 const routes: Routes = [
