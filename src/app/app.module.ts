@@ -89,7 +89,7 @@ import { MatchResultListComponent } from './matchresult/match-result-list/match-
     TournamentInvitationCreateComponent,
     TournamentInvitationDeleteComponent,
     TournamentInvitationDetailComponent,
-    TournamentInvitationEditComponent
+    TournamentInvitationEditComponent,
     MatchResultDetailComponent,
     MatchResultListComponent
   ],
