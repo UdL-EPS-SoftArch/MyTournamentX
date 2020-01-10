@@ -30,8 +30,8 @@ import { TournamentInvitationDeleteComponent } from './tournament-invitation/tou
 import { TournamentInvitationDetailComponent } from './tournament-invitation/tournament-invitation-detail/tournament-invitation-detail.component';
 import { TournamentInvitationEditComponent } from './tournament-invitation/tournament-invitation-edit/tournament-invitation-edit.component';
 // TeamInvitation
-import {TeamInvitationCreateComponent} from './teamInvitation/teamInvitation-create/teamInvitation-create.component';
 import {TeamInvitationDetailComponent} from './teamInvitation/teamInvitation-detail/teamInvitation-detail.component';
+import {TeamInvitationCreateComponent} from './teamInvitation/teamInvitation-create/teamInvitation-create.component';
 import {TeamInvitationListComponent} from './teamInvitation/teamInvitation-list/teamInvitation-list.component';
 
 
@@ -65,7 +65,7 @@ const routes: Routes = [
   // TeamInvitation
   {path: 'teamInvitations/:id', component: TeamInvitationDetailComponent},
   {path: 'teamInvitations/', component: TeamInvitationListComponent},
-  {path: 'teamInvitations/:id/invite', component: TeamInvitationCreateComponent}
+  {path: 'teamInvitation/new', component: TeamInvitationCreateComponent}
 ];
 
 @NgModule({
