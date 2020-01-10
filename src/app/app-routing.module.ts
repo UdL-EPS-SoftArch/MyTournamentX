@@ -29,6 +29,9 @@ import { TournamentInvitationDeleteComponent } from './tournament-invitation/tou
 // tslint:disable-next-line: max-line-length
 import { TournamentInvitationDetailComponent } from './tournament-invitation/tournament-invitation-detail/tournament-invitation-detail.component';
 import { TournamentInvitationEditComponent } from './tournament-invitation/tournament-invitation-edit/tournament-invitation-edit.component';
+// TeamInvitation
+import {TeamInvitationCreateComponent} from './teamInvitation/teamInvitation-create/teamInvitation-create.component';
+import {TeamInvitationDetailComponent} from './teamInvitation/teamInvitation-detail/teamInvitation-detail.component';
 
 
 const routes: Routes = [
@@ -57,8 +60,10 @@ const routes: Routes = [
   {path: 'tournaments/:id/invite', component: TournamentInvitationCreateComponent},
   {path: 'tournamentInvitations/:id/delete', component: TournamentInvitationDeleteComponent},
   {path: 'tournamentInvitations/:id', component: TournamentInvitationDetailComponent},
-  {path: 'tournamentInvitations/:id/edit', component: TournamentInvitationEditComponent}
-
+  {path: 'tournamentInvitations/:id/edit', component: TournamentInvitationEditComponent},
+  // TeamInvitation
+  {path: 'teamInvitations/:id', component: TeamInvitationDetailComponent},
+  {path: 'teamInvitations/:id/invite', component: TeamInvitationCreateComponent}
 ];
 
 @NgModule({
