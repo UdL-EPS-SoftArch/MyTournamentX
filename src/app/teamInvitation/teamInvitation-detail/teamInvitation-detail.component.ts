@@ -6,7 +6,7 @@ import { User } from '../../shared/models/user';
 import { AuthenticationBasicService } from '../../login-basic/authentication-basic.service';
 
 @Component({
-  selector: 'app-teamInvitation-detail',
+  selector: 'app-team-invitation-detail',
   templateUrl: './teamInvitation-detail.component.html'
 })
 export class TeamInvitationDetailComponent implements OnInit {

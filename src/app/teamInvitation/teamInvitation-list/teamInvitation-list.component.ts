@@ -3,7 +3,7 @@ import { TeamInvitation } from '../../shared/models/teaminvitation';
 import {TeamInvitationServiceService} from '../../shared/services/team-invitation-service.service';
 
 @Component({
-  selector: 'app-teamInvitation-list',
+  selector: 'app-team-invitation-list',
   templateUrl: './teamInvitation-list.component.html',
   styleUrls: ['./teamInvitation-list.component.css']
 })
