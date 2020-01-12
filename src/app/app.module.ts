@@ -58,6 +58,8 @@ import { TournamentInvitationDeleteComponent } from './tournament-invitation/tou
 // tslint:disable-next-line:max-line-length
 import { TournamentInvitationDetailComponent } from './tournament-invitation/tournament-invitation-detail/tournament-invitation-detail.component';
 import { TournamentInvitationEditComponent } from './tournament-invitation/tournament-invitation-edit/tournament-invitation-edit.component';
+import { MatchResultDetailComponent } from './matchresult/match-result-detail/match-result-detail.component';
+import { MatchResultListComponent } from './matchresult/match-result-list/match-result-list.component';
 
 @NgModule({
   declarations: [
@@ -87,6 +89,8 @@ import { TournamentInvitationEditComponent } from './tournament-invitation/tourn
     TournamentInvitationDeleteComponent,
     TournamentInvitationDetailComponent,
     TournamentInvitationEditComponent,
+    MatchResultDetailComponent,
+    MatchResultListComponent
   ],
   imports: [
     BrowserModule,

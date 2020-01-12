@@ -27,6 +27,7 @@ import { TournamentInvitationDeleteComponent } from './tournament-invitation/tou
 // tslint:disable-next-line:max-line-length
 import { TournamentInvitationDetailComponent } from './tournament-invitation/tournament-invitation-detail/tournament-invitation-detail.component';
 import { TournamentInvitationEditComponent } from './tournament-invitation/tournament-invitation-edit/tournament-invitation-edit.component';
+import { MatchResultListComponent } from './matchresult/match-result-list/match-result-list.component';
 
 const routes: Routes = [
   {path: 'tournaments/:id', component: TournamentDetailComponent},
@@ -45,6 +46,8 @@ const routes: Routes = [
   {path: 'teams/:id/edit', component: TeamEditComponent},
   {path: 'teams/:id/delete', component: TeamDeleteComponent},
   {path: 'teams/:id', component: TeamDetailComponent},
+  // matchResult
+  {path: 'matchresults', component: MatchResultListComponent},
   // Tournaments
   {path: 'tournaments', component: TournamentListComponent},
   {path: 'tournaments/new', component: TournamentCreateComponent},
