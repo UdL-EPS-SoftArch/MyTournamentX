@@ -1,0 +1,21 @@
+mat-card-title-group {
+    justify-content: start;
+    padding-top: 1.5rem;
+    font-weight: bolder;
+    font-size: 1.25rem;
+}
+
+.main-info {
+    padding-top: 1rem;
+    
+}
+
+.tournament-fields {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+span.title {
+    padding-right: 2rem;
+    font-weight: bolder;
+}

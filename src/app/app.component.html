@@ -34,6 +34,10 @@
             <!--<button mat-menu-item [routerLink]="'/tournaments/:id'">My Tournament</button>-->
             <button mat-menu-item [routerLink]="'/tournaments/new'">Create Tournament</button>
           </mat-menu>
+          <button style="margin-left: 15px;"mat-icon-button [matMenuTriggerFor]="matchResultMenu">MatchResults</button>
+          <mat-menu #matchResultMenu="matMenu">
+            <button mat-menu-item [routerLink]="'/matchresults'">List Teams</button>
+          </mat-menu>
           <!-- Team Invitation -->
           <button style="margin-left: 50px;"mat-icon-button [matMenuTriggerFor]="teamInvitationMenu">Team Invitation</button>
           <mat-menu #teamInvitationMenu="matMenu">

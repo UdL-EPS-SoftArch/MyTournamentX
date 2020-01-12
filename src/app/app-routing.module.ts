@@ -29,13 +29,14 @@ import { TournamentInvitationDeleteComponent } from './tournament-invitation/tou
 // tslint:disable-next-line: max-line-length
 import { TournamentInvitationDetailComponent } from './tournament-invitation/tournament-invitation-detail/tournament-invitation-detail.component';
 import { TournamentInvitationEditComponent } from './tournament-invitation/tournament-invitation-edit/tournament-invitation-edit.component';
+import { MatchResultListComponent } from './matchresult/match-result-list/match-result-list.component';
 // TeamInvitation
 import {TeamInvitationCreateComponent} from './teamInvitation/teamInvitation-create/teamInvitation-create.component';
 import {TeamInvitationDetailComponent} from './teamInvitation/teamInvitation-detail/teamInvitation-detail.component';
 import {TeamInvitationListComponent} from './teamInvitation/teamInvitation-list/teamInvitation-list.component';
 
-
 const routes: Routes = [
+  {path: 'tournaments/:id', component: TournamentDetailComponent},
   {path: 'tournaments/:id/rounds/', component: RoundListComponent},
   {path: 'rounds/:id', component: RoundDetailComponent},
   {path: 'players/register', component: PlayerRegisterComponent},
@@ -51,6 +52,8 @@ const routes: Routes = [
   {path: 'teams/:id/edit', component: TeamEditComponent},
   {path: 'teams/:id/delete', component: TeamDeleteComponent},
   {path: 'teams/:id', component: TeamDetailComponent},
+  // matchResult
+  {path: 'matchresults', component: MatchResultListComponent},
   // Tournaments
   {path: 'tournaments', component: TournamentListComponent},
   {path: 'tournaments/new', component: TournamentCreateComponent},
