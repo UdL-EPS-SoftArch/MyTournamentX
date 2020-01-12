@@ -21,6 +21,6 @@ export class TournamentServiceService extends RestService<Tournament> {
   public existsByName(id: string): Boolean {
     const options: any = {params: [{key: 'name', value: id}]};
     return this.search('existsByName', options);
-  }  
+  }
   */
 }

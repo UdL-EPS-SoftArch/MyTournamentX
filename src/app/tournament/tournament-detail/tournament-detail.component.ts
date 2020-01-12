@@ -1,10 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-
-import { ActivatedRoute, Router } from '@angular/router';
-
-import { TournamentServiceService } from '../../shared/services/tournament-service.service';
-import { Tournament } from '../../shared/models/tournament';
-import { Team } from 'src/app/shared/models/team';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
+import {TournamentServiceService} from '../../shared/services/tournament-service.service';
+import {Tournament} from '../../shared/models/tournament';
 
 @Component({
   selector: 'app-tournament-detail',
@@ -12,19 +9,19 @@ import { Team } from 'src/app/shared/models/team';
   templateUrl: './tournament-detail.component.html'
 })
 export class TournamentDetailComponent implements OnInit {
-    private tournament?: Tournament;
-    private id =  '';
-    constructor(private route: ActivatedRoute,
-                private router: Router,
-                private tournamentService: TournamentServiceService) {
-    }
+  tournament?: Tournament;
+  id = '';
+
+  constructor(private route: ActivatedRoute,
+              private router: Router,
+              private tournamentService: TournamentServiceService) {
+  }
 
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get('id');
     this.tournamentService.get(this.id).subscribe(tournament => {
-        this.tournament = tournament;
-        console.log(tournament);
-            });
-        };
-    };
-
+      this.tournament = tournament;
+      console.log(tournament);
+    });
+  }
+}
