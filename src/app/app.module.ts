@@ -36,6 +36,8 @@ import { PlayerRegisterComponent } from './player/player-register/player-registe
 import { PlayerEditComponent } from './player/player-edit/player-edit.component';
 import { PlayerSearchComponent } from './player/player-search/player-search.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { TeamInvitationDetailComponent } from './teamInvitation/teamInvitation-detail/teamInvitation-detail.component';
+import { TeamInvitationCreateComponent } from './teamInvitation/teamInvitation-create/teamInvitation-create.component';
 import { TeamListComponent } from './team/team-list/team-list.component';
 import { TeamDetailComponent } from './team/team-detail/team-detail.component';
 import { MatTableModule } from '@angular/material/table';
@@ -60,6 +62,7 @@ import { TournamentInvitationDetailComponent } from './tournament-invitation/tou
 import { TournamentInvitationEditComponent } from './tournament-invitation/tournament-invitation-edit/tournament-invitation-edit.component';
 import { MatchResultDetailComponent } from './matchresult/match-result-detail/match-result-detail.component';
 import { MatchResultListComponent } from './matchresult/match-result-list/match-result-list.component';
+import { TeamInvitationListComponent } from './teamInvitation/teamInvitation-list/teamInvitation-list.component';
 
 @NgModule({
   declarations: [
@@ -72,6 +75,8 @@ import { MatchResultListComponent } from './matchresult/match-result-list/match-
     PlayerRegisterComponent,
     PlayerEditComponent,
     PlayerSearchComponent,
+    TeamInvitationDetailComponent,
+    TeamInvitationCreateComponent,
     TeamListComponent,
     TeamDetailComponent,
     TeamEditComponent,
@@ -90,7 +95,9 @@ import { MatchResultListComponent } from './matchresult/match-result-list/match-
     TournamentInvitationDetailComponent,
     TournamentInvitationEditComponent,
     MatchResultDetailComponent,
-    MatchResultListComponent
+    MatchResultListComponent,
+    TournamentInvitationEditComponent,
+    TeamInvitationListComponent
   ],
   imports: [
     BrowserModule,

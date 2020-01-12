@@ -1,0 +1,13 @@
+table {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 2%;
+}
+
+tr.teams-element-row:hover {
+  background: #777;
+}
+
+tr.teams-element-row:active {
+  background: #efefef;
+}

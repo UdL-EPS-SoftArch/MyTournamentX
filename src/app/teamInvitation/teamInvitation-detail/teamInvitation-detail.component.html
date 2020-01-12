@@ -1,0 +1,19 @@
+<mat-card>
+  <mat-card-header>
+    <div mat-card-avatar><mat-icon class="icon-big" aria-hidden="true">account_circle</mat-icon></div>
+    <mat-card-title>{{teamInvitation.id}}</mat-card-title>
+    <mat-card-subtitle>MyTournamentX TeamInvitation</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item>
+        <p matLine>User</p>
+        <p matLine>{{teamInvitation.username.username}}</p>
+      </mat-list-item>
+      <mat-list-item>
+        <p matLine>Team</p>
+        <p matLine>{{teamInvitation.team.name}}</p>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

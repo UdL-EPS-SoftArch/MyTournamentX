@@ -38,7 +38,13 @@
           <mat-menu #matchResultMenu="matMenu">
             <button mat-menu-item [routerLink]="'/matchresults'">List Teams</button>
           </mat-menu>
-
+          <!-- Team Invitation -->
+          <button style="margin-left: 50px;"mat-icon-button [matMenuTriggerFor]="teamInvitationMenu">Team Invitation</button>
+          <mat-menu #teamInvitationMenu="matMenu">
+            <button mat-menu-item [routerLink]="'/teamInvitations'">List Team Invitations</button>
+            <!--<button mat-menu-item [routerLink]="'/teamInvitation/:id'">My Tournament</button>-->
+            <button mat-menu-item [routerLink]="'/teamInvitation/new'">Create Team Invitation</button>
+          </mat-menu>
         </div>
         <span class="menu-spacer"></span>
         <div app-login-navbar></div>
